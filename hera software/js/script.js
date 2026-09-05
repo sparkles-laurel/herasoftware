@@ -1100,3 +1100,237 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+
+/* =========================================================
+   SPA PAGE SYSTEM
+   ========================================================= */
+
+const pageLinks = document.querySelectorAll(".page-link");
+
+const internalPages = document.querySelectorAll(".internal-page");
+
+const homeContent = document.querySelectorAll(
+    "main > .hero, main > .ticker, main > .section, main > .cta-section, main > footer"
+);
+
+
+function showPage(pageName) {
+
+    /*
+     * once her seyi kapat
+     */
+
+    internalPages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+
+    /*
+     * anasayfa elemanlarini gizle
+     */
+
+    homeContent.forEach(element => {
+
+        element.style.display = "none";
+
+    });
+
+
+    /*
+     * istenen sayfayi bul
+     */
+
+    const target =
+        document.getElementById(pageName);
+
+
+    if (!target)
+        return;
+
+
+    /*
+     * sayfayi ac
+     */
+
+    target.classList.add("active");
+
+
+    /*
+     * sidebar active
+     */
+
+    pageLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+            link.dataset.page === pageName
+        ) {
+            link.classList.add("active");
+        }
+
+    });
+
+
+    /*
+     * sayfanin basina git
+     */
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+function showHome() {
+
+    internalPages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+
+    homeContent.forEach(element => {
+
+        element.style.display = "";
+
+    });
+
+
+    pageLinks.forEach(link => {
+        link.classList.remove("active");
+    });
+
+
+    const homeLink =
+        document.querySelector(
+            '[data-target="vitrin"]'
+        );
+
+    homeLink?.classList.add("active");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/*
+ * sidebar linkleri
+ */
+
+pageLinks.forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        const page =
+            link.dataset.page;
+
+        if (!page)
+            return;
+
+
+        /*
+         * browser adresini degistir
+         * ama sayfayi yeniden yukleme
+         */
+
+        history.pushState(
+            {
+                page: page
+            },
+            "",
+            `#${page}`
+        );
+
+
+        showPage(page);
+
+    });
+
+});
+
+
+/*
+ * anasayfa linki
+ */
+
+document
+    .querySelectorAll(
+        '[data-target="vitrin"]'
+    )
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            event => {
+
+                event.preventDefault();
+
+                history.pushState(
+                    {},
+                    "",
+                    window.location.pathname
+                );
+
+                showHome();
+
+            }
+        );
+
+    });
+
+
+/*
+ * geri / ileri butonlari
+ */
+
+window.addEventListener(
+    "popstate",
+    () => {
+
+        const page =
+            window.location.hash
+                .replace("#", "");
+
+
+        if (page) {
+
+            showPage(page);
+
+        } else {
+
+            showHome();
+
+        }
+
+    }
+);
+
+
+/*
+ * sayfa ilk acildiginda
+ * hash varsa direkt o sayfayi ac
+ */
+
+const initialPage =
+    window.location.hash
+        .replace("#", "");
+
+
+if (initialPage) {
+
+    setTimeout(() => {
+        showPage(initialPage);
+    }, 50);
+
+}
