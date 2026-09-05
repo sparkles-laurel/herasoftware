@@ -1208,7 +1208,7 @@ function showHome() {
 
     const homeLink =
         document.querySelector(
-            '[data-target="vitrin"]'
+            '[data-target=""]'
         );
 
     homeLink?.classList.add("active");
