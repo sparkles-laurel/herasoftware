@@ -3101,3 +3101,1870 @@ footer {
     }
 
 }
+
+
+
+
+
+
+
+.pp-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.pplink {
+    width: 45%;
+    padding: 5px;
+    color: white;
+    transition: 0.2s;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+.fediverselink{
+    border:3px solid white;
+    background-color: var(--purple);
+}
+
+.instalink{
+    border:3px solid white;
+    background-color:var(--pink);
+}
+.xitterlink{
+    border:3px solid white;
+    background-color: black;
+}
+.youtubelink{
+    border:3px solid white;
+    background-color: red;
+}
+
+
+
+
+.fediverselink:hover{
+    background-color: transparent;
+    border:3px solid white;
+    color: var(--purple);
+}
+
+
+.instalink:hover{
+    background-color:white;
+    color:var(--pink);
+}
+.xitterlink:hover{
+    background-color:white;
+    color:black;
+}
+.youtubelink:hover{
+    background-color:white;
+    color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   HAKKIMIZDA
+========================================================= */
+
+#hakkimizda {
+    position: relative;
+    isolation: isolate;
+}
+
+/* background glow */
+
+#hakkimizda::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    top: 80px;
+    right: -180px;
+    border-radius: 50%;
+    background: var(--purple);
+    opacity: 0.08;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+#hakkimizda::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: 0;
+    left: -180px;
+    border-radius: 50%;
+    background: var(--pink);
+    opacity: 0.05;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+#hakkimizda .page-header {
+    max-width: 900px;
+    margin-bottom: 110px;
+}
+
+#hakkimizda .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--purple);
+}
+
+#hakkimizda .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+}
+
+#hakkimizda .page-header h1 {
+    margin: 0;
+
+    font-size: clamp(60px, 9vw, 150px);
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+#hakkimizda .page-header h1 span {
+    color: var(--purple);
+}
+
+#hakkimizda .page-lead {
+    max-width: 650px;
+    margin-top: 35px;
+
+    font-size: clamp(20px, 2.2vw, 30px);
+    line-height: 1.35;
+    font-weight: 500;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 100px;
+
+    max-width: 1300px;
+    margin: 0 auto 160px;
+}
+
+
+/* =========================================================
+   MAIN TEXT
+========================================================= */
+
+.about-main {
+    position: relative;
+    padding-left: 45px;
+}
+
+.about-number {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    color: var(--purple);
+}
+
+.about-main h2 {
+    max-width: 700px;
+    margin-bottom: 40px;
+
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+
+    color: var(--text);
+}
+
+.about-main h2 strong {
+    display: block;
+    color: var(--purple);
+}
+
+.about-main p {
+    max-width: 650px;
+    margin-bottom: 24px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   ABOUT CARDS
+========================================================= */
+
+.about-side {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+
+    padding: 28px;
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s cubic-bezier(.16, 1, .3, 1),
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.45s ease;
+}
+
+.about-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,0.04),
+            transparent 80%
+        );
+
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--purple);
+
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2),
+        0 0 40px rgba(140, 90, 255, 0.06);
+}
+
+.about-card:hover::before {
+    transform: translateX(100%);
+}
+
+.about-card-number {
+    display: flex;
+    align-items: flex-start;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+
+    color: var(--purple);
+}
+
+.about-card small {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 22px;
+    letter-spacing: -0.03em;
+
+    color: var(--text);
+}
+
+.about-card p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.65;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+========================================================= */
+
+.about-bottom {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 120px;
+
+    max-width: 1300px;
+    margin: 0 auto;
+
+    padding-top: 100px;
+    border-top: 1px solid var(--line);
+}
+
+.about-statement > span {
+    display: block;
+    margin-bottom: 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+.about-statement h2 {
+    margin: 0;
+
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.82;
+    letter-spacing: -0.07em;
+
+    color: var(--text);
+}
+
+.about-statement h2 strong {
+    color: var(--purple);
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+========================================================= */
+
+.about-text {
+    max-width: 650px;
+    padding-top: 10px;
+}
+
+.about-text > p {
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+.about-signature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 55px;
+}
+
+.about-signature span {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+
+    color: var(--text);
+}
+
+.about-signature small {
+    position: relative;
+
+    padding-left: 15px;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+.about-signature small::before {
+    content: "";
+
+    position: absolute;
+    width: 4px;
+    height: 4px;
+
+    left: 0;
+    top: 50%;
+
+    border-radius: 50%;
+
+    background: var(--purple);
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+#hakkimizda .reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s cubic-bezier(.16, 1, .3, 1),
+        transform 0.8s cubic-bezier(.16, 1, .3, 1);
+}
+
+#hakkimizda .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #hakkimizda .page-header {
+        margin-bottom: 75px;
+    }
+
+    #hakkimizda .page-header h1 {
+        font-size: clamp(55px, 16vw, 100px);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+
+        margin-bottom: 100px;
+    }
+
+    .about-main {
+        padding-left: 35px;
+    }
+
+    .about-main h2 {
+        font-size: clamp(40px, 11vw, 65px);
+    }
+
+    .about-bottom {
+        grid-template-columns: 1fr;
+        gap: 60px;
+
+        padding-top: 70px;
+    }
+
+    .about-statement h2 {
+        font-size: clamp(60px, 17vw, 100px);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #hakkimizda {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    #hakkimizda .page-lead {
+        font-size: 19px;
+    }
+
+    .about-card {
+        grid-template-columns: 35px 1fr;
+        padding: 22px;
+    }
+
+    .about-card h3 {
+        font-size: 19px;
+    }
+
+    .about-card p {
+        font-size: 13px;
+    }
+
+    .about-main p,
+    .about-text > p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .about-signature {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .about-signature small {
+        padding-left: 0;
+    }
+
+    .about-signature small::before {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   WHY HERA
+========================================================= */
+
+#whyhera {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+#whyhera::before {
+    content: "";
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: 0;
+    right: -250px;
+
+    border-radius: 50%;
+
+    background: var(--purple);
+    opacity: 0.08;
+
+    filter: blur(130px);
+
+    pointer-events: none;
+    z-index: -1;
+
+    animation: whyGlow 8s ease-in-out infinite alternate;
+}
+
+#whyhera::after {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    left: -220px;
+    bottom: 500px;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+    opacity: 0.05;
+
+    filter: blur(120px);
+
+    pointer-events: none;
+    z-index: -1;
+
+    animation: whyGlow 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes whyGlow {
+    from {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    to {
+        transform: translate3d(50px, -30px, 0) scale(1.15);
+    }
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.whyhera-intro {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+
+    max-width: 1200px;
+
+    margin: 0 auto 150px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid var(--line);
+}
+
+.whyhera-intro-number {
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: var(--purple);
+}
+
+.whyhera-intro-content {
+    max-width: 850px;
+}
+
+.whyhera-intro-content h2 {
+    margin: 0 0 40px;
+
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 0.9;
+
+    letter-spacing: -0.065em;
+
+    color: var(--text);
+}
+
+.whyhera-intro-content h2 strong {
+    color: var(--purple);
+}
+
+.whyhera-intro-content p {
+    max-width: 720px;
+
+    margin-bottom: 25px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.whyhera-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    max-width: 1200px;
+
+    margin: 0 auto 170px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.whyhera-card {
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid var(--line);
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    overflow: hidden;
+
+    transform: translateZ(0);
+
+    transition:
+        transform 0.6s cubic-bezier(.16, 1, .3, 1),
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.6s ease;
+}
+
+
+/* shine */
+
+.whyhera-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -100%;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 35%,
+            rgba(255, 255, 255, 0.07) 50%,
+            transparent 65%
+        );
+
+    transform: translateX(-50%) rotate(10deg);
+
+    transition: transform 1s cubic-bezier(.16, 1, .3, 1);
+
+    pointer-events: none;
+}
+
+
+/* glow */
+
+.whyhera-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    bottom: -90px;
+
+    border-radius: 50%;
+
+    background: var(--purple);
+
+    opacity: 0;
+
+    filter: blur(70px);
+
+    transition: opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+.whyhera-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.22),
+        0 0 50px rgba(140, 80, 255, 0.06);
+}
+
+.whyhera-card:hover::before {
+    transform: translateX(100%) rotate(10deg);
+}
+
+.whyhera-card:hover::after {
+    opacity: 0.1;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.whyhera-card-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--muted);
+}
+
+.whyhera-card-top span:first-child {
+    color: var(--purple);
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.whyhera-icon {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    width: 65px;
+    height: 65px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 50px;
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    font-size: 25px;
+
+    color: var(--purple);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.6s cubic-bezier(.16, 1, .3, 1),
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+.whyhera-card:hover .whyhera-icon {
+    transform: rotate(8deg) scale(1.08);
+
+    border-color: var(--purple);
+
+    background: rgba(140, 80, 255, 0.08);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.whyhera-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 30px 0 12px;
+
+    font-size: clamp(25px, 3vw, 35px);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+    color: var(--text);
+}
+
+.whyhera-card p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.whyhera-statement {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    max-width: 1200px;
+
+    margin: 0 auto 180px;
+
+    padding: 90px 0;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.whyhera-statement-label {
+    padding-top: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--purple);
+}
+
+.whyhera-statement-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.whyhera-statement-text span {
+    font-size: 18px;
+
+    color: var(--muted);
+}
+
+.whyhera-statement-text strong {
+    max-width: 850px;
+
+    font-size: clamp(45px, 7vw, 95px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.07em;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.whyhera-process {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 120px;
+
+    max-width: 1200px;
+
+    margin: 0 auto 180px;
+}
+
+.whyhera-process-heading {
+    position: sticky;
+
+    top: 130px;
+
+    align-self: start;
+}
+
+.whyhera-process-heading .eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--purple);
+}
+
+.whyhera-process-heading .eyebrow::before {
+    content: "";
+
+    width: 25px;
+    height: 1px;
+
+    background: currentColor;
+}
+
+.whyhera-process-heading h2 {
+    margin: 0;
+
+    font-size: clamp(50px, 6vw, 85px);
+
+    line-height: 0.85;
+
+    letter-spacing: -0.065em;
+
+    color: var(--text);
+}
+
+.whyhera-process-heading h2 strong {
+    display: block;
+
+    color: var(--purple);
+}
+
+
+/* =========================================================
+   PROCESS LIST
+========================================================= */
+
+.whyhera-process-list {
+    border-top: 1px solid var(--line);
+}
+
+.whyhera-process-item {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    padding: 40px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    transition:
+        padding-left 0.5s cubic-bezier(.16, 1, .3, 1),
+        background 0.4s ease;
+}
+
+.whyhera-process-item > span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: var(--purple);
+
+    transition: transform 0.5s cubic-bezier(.16, 1, .3, 1);
+}
+
+.whyhera-process-item h3 {
+    margin: 0 0 12px;
+
+    font-size: 25px;
+
+    letter-spacing: -0.035em;
+
+    color: var(--text);
+}
+
+.whyhera-process-item p {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: var(--muted);
+}
+
+.whyhera-process-item:hover {
+    padding-left: 18px;
+}
+
+.whyhera-process-item:hover > span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.whyhera-final {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 120px 70px;
+
+    text-align: center;
+
+    border: 1px solid var(--line);
+    border-radius: 35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(140, 80, 255, 0.09),
+            transparent 60%
+        );
+
+    overflow: hidden;
+}
+
+.whyhera-final::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -130px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: var(--purple);
+
+    opacity: 0.08;
+
+    filter: blur(80px);
+
+    animation: finalPulse 5s ease-in-out infinite;
+}
+
+@keyframes finalPulse {
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.06;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.35);
+        opacity: 0.12;
+    }
+}
+
+.whyhera-final > span {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: var(--purple);
+}
+
+.whyhera-final h2 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto 45px;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.065em;
+
+    color: var(--text);
+}
+
+.whyhera-final h2 strong {
+    display: block;
+
+    color: var(--purple);
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.whyhera-final .primary-btn {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.whyhera-final .primary-btn span {
+    transition: transform 0.35s ease;
+}
+
+.whyhera-final .primary-btn:hover span {
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+#whyhera .reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.9s cubic-bezier(.16, 1, .3, 1),
+        transform 0.9s cubic-bezier(.16, 1, .3, 1);
+}
+
+#whyhera .reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .whyhera-intro {
+        grid-template-columns: 45px 1fr;
+
+        margin-bottom: 100px;
+    }
+
+    .whyhera-grid {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 110px;
+    }
+
+    .whyhera-card {
+        min-height: 330px;
+    }
+
+    .whyhera-statement {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        margin-bottom: 110px;
+
+        padding: 65px 0;
+    }
+
+    .whyhera-process {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+        margin-bottom: 110px;
+    }
+
+    .whyhera-process-heading {
+        position: relative;
+
+        top: auto;
+    }
+
+    .whyhera-final {
+        padding: 80px 30px;
+
+        border-radius: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .whyhera-intro {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .whyhera-intro-content h2 {
+        font-size: clamp(42px, 12vw, 65px);
+
+        margin-bottom: 30px;
+    }
+
+    .whyhera-intro-content p {
+        font-size: 15px;
+    }
+
+    .whyhera-card {
+        min-height: 320px;
+
+        padding: 25px;
+    }
+
+    .whyhera-card h3 {
+        font-size: 27px;
+    }
+
+    .whyhera-card p {
+        font-size: 13px;
+    }
+
+    .whyhera-icon {
+        width: 55px;
+        height: 55px;
+
+        margin-top: 40px;
+    }
+
+    .whyhera-statement-text strong {
+        font-size: clamp(43px, 13vw, 65px);
+    }
+
+    .whyhera-process-heading h2 {
+        font-size: clamp(48px, 14vw, 70px);
+    }
+
+    .whyhera-process-item {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+
+        padding: 30px 0;
+    }
+
+    .whyhera-process-item h3 {
+        font-size: 21px;
+    }
+
+    .whyhera-process-item p {
+        font-size: 13px;
+    }
+
+    .whyhera-final {
+        padding: 65px 22px;
+    }
+
+    .whyhera-final h2 {
+        font-size: clamp(42px, 12vw, 65px);
+
+        margin-bottom: 35px;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   TEKNOLOJILER
+========================================================= */
+
+#teknolojiler {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+#teknolojiler::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: 50px;
+    right: -280px;
+    border-radius: 50%;
+    background: var(--purple);
+    opacity: 0.07;
+    filter: blur(140px);
+    pointer-events: none;
+    z-index: -1;
+    animation: techGlow 9s ease-in-out infinite alternate;
+}
+
+#teknolojiler::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: -250px;
+    bottom: 300px;
+    border-radius: 50%;
+    background: var(--pink);
+    opacity: 0.04;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes techGlow {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(-60px, 40px) scale(1.15);
+    }
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.tech-intro {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    max-width: 1200px;
+    margin: 0 auto 130px;
+    padding-top: 30px;
+    border-top: 1px solid var(--line);
+}
+
+.tech-intro-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--purple);
+}
+
+.tech-intro h2 {
+    max-width: 800px;
+    margin-bottom: 35px;
+    font-size: clamp(45px, 6vw, 80px);
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+    color: var(--text);
+}
+
+.tech-intro h2 strong {
+    color: var(--purple);
+}
+
+.tech-intro p {
+    max-width: 700px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   TECH GRID
+========================================================= */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto 160px;
+}
+
+
+/* =========================================================
+   TECH CARD
+========================================================= */
+
+.tech-card {
+    position: relative;
+    min-height: 390px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.025);
+    overflow: hidden;
+
+    transition:
+        transform 0.6s cubic-bezier(.16, 1, .3, 1),
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.6s ease;
+}
+
+.tech-card::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: -120px;
+    top: -120px;
+    border-radius: 50%;
+    background: var(--purple);
+    opacity: 0;
+    filter: blur(80px);
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.22),
+        0 0 50px rgba(140, 80, 255, 0.06);
+}
+
+.tech-card:hover::before {
+    opacity: 0.12;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.tech-card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    color: var(--muted);
+}
+
+.tech-card-top span:first-child {
+    color: var(--purple);
+}
+
+
+/* =========================================================
+   TECHNOLOGY LOGO
+========================================================= */
+
+.tech-logo {
+    position: relative;
+    z-index: 2;
+
+    width: 100px;
+    height: 100px;
+
+    margin: 45px 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--line);
+    border-radius: 24px;
+
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.6s cubic-bezier(.16, 1, .3, 1),
+        border-color 0.4s ease,
+        box-shadow 0.5s ease;
+}
+
+.tech-card:hover .tech-logo {
+    transform: rotate(-4deg) scale(1.08);
+
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 40px rgba(140, 80, 255, 0.12);
+}
+
+.tech-js {
+    font-size: 35px;
+}
+
+.tech-php {
+    font-size: 30px;
+}
+
+.tech-html {
+    font-size: 30px;
+}
+
+.tech-css {
+    font-size: 38px;
+}
+
+.tech-rust {
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.tech-card-content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+}
+
+.tech-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.045em;
+
+    color: var(--text);
+}
+
+.tech-card p {
+    max-width: 500px;
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   CARD LINE
+========================================================= */
+
+.tech-card-line {
+    position: absolute;
+
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--purple);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition:
+        transform 0.6s cubic-bezier(.16, 1, .3, 1);
+}
+
+.tech-card:hover .tech-card-line {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   RUST
+========================================================= */
+
+.tech-rust-card {
+    grid-column: span 2;
+    min-height: 330px;
+}
+
+.tech-rust-card .tech-logo {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.tech-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 90px 0;
+
+    border-top: 1px solid var(--line);
+}
+
+.tech-bottom-label {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    color: var(--muted);
+}
+
+.tech-bottom-content h2 {
+    max-width: 900px;
+    margin-bottom: 30px;
+
+    font-size: clamp(50px, 7vw, 95px);
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+
+    color: var(--text);
+}
+
+.tech-bottom-content h2 strong {
+    display: block;
+    color: var(--purple);
+}
+
+.tech-bottom-content p {
+    max-width: 600px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+#teknolojiler .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.9s cubic-bezier(.16, 1, .3, 1),
+        transform 0.9s cubic-bezier(.16, 1, .3, 1);
+}
+
+#teknolojiler .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .tech-intro {
+        grid-template-columns: 45px 1fr;
+        margin-bottom: 100px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 110px;
+    }
+
+    .tech-rust-card {
+        grid-column: span 1;
+    }
+
+    .tech-card {
+        min-height: 350px;
+    }
+
+    .tech-bottom {
+        padding: 70px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .tech-intro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tech-intro h2 {
+        font-size: clamp(42px, 12vw, 65px);
+        margin-bottom: 30px;
+    }
+
+    .tech-intro p {
+        font-size: 15px;
+    }
+
+    .tech-card {
+        min-height: 330px;
+        padding: 24px;
+    }
+
+    .tech-logo {
+        width: 75px;
+        height: 75px;
+
+        margin: 35px 0 25px;
+
+        border-radius: 19px;
+
+        font-size: 25px;
+    }
+
+    .tech-card h3 {
+        font-size: 27px;
+    }
+
+    .tech-card p {
+        font-size: 13px;
+    }
+
+    .tech-card-line {
+        left: 24px;
+        right: 24px;
+    }
+
+    .tech-bottom-label {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tech-bottom-content h2 {
+        font-size: clamp(45px, 13vw, 65px);
+    }
+}
