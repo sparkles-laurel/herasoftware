@@ -4968,3 +4968,117 @@ footer {
         font-size: clamp(45px, 13vw, 65px);
     }
 }
+
+
+
+
+
+
+
+/* Paketler Grid & Card Stilleri */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.package-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.package-card.featured {
+  border-color: rgba(255, 100, 150, 0.4);
+  background: rgba(255, 100, 150, 0.03);
+}
+
+.package-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.package-card-top .badge {
+  font-size: 0.75rem;
+  color: #ff6496;
+  background: rgba(255, 100, 150, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 100, 150, 0.2);
+}
+
+.package-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.package-header p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.package-price-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-main {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.price-main small {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.price-split {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+}
+
+.price-split strong {
+  color: #a5f3fc;
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+.package-features li {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.package-card button {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
