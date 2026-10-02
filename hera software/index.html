@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hera Software — Dijital Ürünler & Web Çözümleri</title>
-  <meta name="description" content="Hera Software — Modern, hızlı ve özgün web siteleri. fikrini gerçeğe dönüştüren dijital çözümler.">
+  <meta name="description" content="Hera Software — Modern, hızlı ve özgün web siteleri. Fikrini gerçeğe dönüştüren dijital çözümler.">
 
-  <meta property="og:title" content="hera software">
-  <meta property="og:description" content="modern, hızlı ve özgün web siteleri. fikrini gerçeğe dönüştüren dijital çözümler.">
+  <meta property="og:title" content="Hera Software">
+  <meta property="og:description" content="Modern, hızlı ve özgün web siteleri. Fikrini gerçeğe dönüştüren dijital çözümler.">
   <meta property="og:image" content="https://herasoftware.org/assets/img/og-image.jpg">
   <meta property="og:url" content="https://herasoftware.org/">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="hera software">
-  <meta name="twitter:description" content="modern, hızlı ve özgün web siteleri. fikrini gerçeğe dönüştüren dijital çözümler.">
+  <meta name="twitter:title" content="Hera Software">
+  <meta name="twitter:description" content="Modern, hızlı ve özgün web siteleri. Fikrini gerçeğe dönüştüren dijital çözümler.">
   <meta name="twitter:image" content="https://herasoftware.org/assets/img/og-image.jpg">
   
   <link rel="stylesheet" href="css/style.css">
@@ -22,207 +22,163 @@
 <body>
   <div class="noise"></div>
   <div class="cursor-glow"></div>
-  <div class="page-loader"><div class="loader-logo"><p align="center"><img src="assets/logo/logobg.png" style="width: 50%;"></p><span></span></div><div class="loader-line"><i></i></div></div>
+  <div class="page-loader">
+    <div class="loader-logo">
+      <img src="assets/logo/logobg.png" alt="Hera Software Logo">
+    </div>
+    <div class="loader-line"><i></i></div>
+  </div>
 
+  <!-- HEADER / NAVBAR -->
   <header class="topbar">
-    <button class="mobile-menu" aria-label="menüyü aç" aria-expanded="false"><span></span><span></span></button>
-    <a class="brand" href="/" data-target=""><img src="assets/logo/logobg.png" alt="Hera Software"><span class="brand-caption">daha iyi bir dijital gelecek için</span></a>
-    <nav class="top-nav" aria-label="ana gezinme">
-      <a href="/" data-target="">anasayfa</a>
-      <a href="#hakkimizda" class="page-link" data-page="hakkimizda">hakkımızda</a>
-      <a href="#market" class="page-link" data-page="market">market</a>
+    <a class="brand" href="/" data-target="vitrin">
+      <img src="assets/logo/logobg.png" alt="Hera Software">
+      <span class="brand-caption">daha iyi bir dijital gelecek için</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Ana gezinme">
+      <a href="/" data-target="vitrin" class="nav-item-link active">anasayfa</a>
       <a href="#web" class="page-link" data-page="web">projeler</a>
       <a href="#paketler" class="page-link" data-page="paketler">paketler</a>
+      <a href="#hakkimizda" class="page-link" data-page="hakkimizda">hakkımızda</a>
+      <a href="#ekip" class="page-link" data-page="ekip">ekip</a>
+      <a href="#whyhera" class="page-link" data-page="whyhera">neden hera?</a>
+      <a href="#teknolojiler" class="page-link" data-page="teknolojiler">teknolojiler</a>
+      <a href="#market" class="page-link" data-page="market">market</a>
     </nav>
-    <div class="top-actions"><a class="cart-shortcut page-link" href="#sepetim" data-page="sepetim" aria-label="sepetim">sepetim <span class="cart-count" data-cart-count>0</span></a></div>
-    <div class="top-search"><span>⌕</span><input id="search" placeholder="ürün, kategori veya etiket ara..."><kbd>⌘ K</kbd></div>
+
+    <div class="top-actions">
+      <a class="cart-shortcut page-link" href="#sepetim" data-page="sepetim" aria-label="sepetim">
+        sepetim <span class="cart-count" data-cart-count>0</span>
+      </a>
+      <div class="auth-buttons">
+        <button class="ghost-btn-sm" data-modal="auth" data-tab="login">giriş yap</button>
+        <button class="primary-btn-sm" data-modal="auth" data-tab="register">kayıt ol</button>
+      </div>
+      <button class="mobile-menu" aria-label="menüyü aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
-  <aside class="sidebar" id="sidebar">
-    <div class="side-scroll">
-        <a href="index.html"><img src="assets/logo/logobg.png" style="width: 100%;"></a>
-      <div class="side-label">gezinti</div>
-      <a class="nav-item active" href="/" data-target=""><span class="nav-icon">⌂</span><span>Anasayfa</span><b>01</b></a>
-      <a class="nav-item page-link" href="#web" data-page="web">
-        <span class="nav-icon">◫</span>
-        <span>Yaptığımız İşler</span>
-      </a>
-      <a class="nav-item page-link" href="#whyhera" data-page="whyhera"><span class="nav-icon">✦</span><span>Neden hera?</span></a> 
-      <a class="nav-item page-link" href="#teknolojiler" data-page="teknolojiler"><span class="nav-icon">◇</span><span>teknolojiler</span><b>06</b></a>
-      <a class="nav-item page-link" href="#paketler" data-page="paketler">
-          <span class="nav-icon">▣</span>
-          <span>paketler</span>
-          <b>04</b>
-      </a>
-
-      <div class="side-label separated">topluluk</div>
-      <a class="nav-item page-link" href="#hakkimizda" data-page="hakkimizda">
-          <span class="nav-icon">◎</span>
-          <span>hakkımızda</span>
-      </a>
-      <a class="nav-item page-link" href="#ekip" data-page="ekip">
-          <span class="nav-icon">♧</span>
-          <span>ekip</span>
-      </a>
-      <!--<a class="nav-item" href="#destek"><span class="nav-icon">?</span><span>destek</span><em>online</em></a> -->
-
-      <div class="side-card">
-        <div class="live-dot"></div>
-        <strong>bir projen mi var?</strong>
-        <p>fikrini anlat, birlikte şekillendirelim.</p>
-        <button class="side-cta" data-modal="contact">iletişime geç <span>↗</span></button>
-      </div>
-    </div>
-    <div class="sidebar-bottom">
-      <span>© 2026 hera software</span>
-    </div>
-  </aside>
-
   <main>
+    <!-- HERO SECTION -->
     <section class="hero reveal" id="vitrin">
       <div class="hero-grid"></div>
-      <div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div>
-      <div class="hero-content">
-        <div class="eyebrow"><span class="pulse"></span> dijital üretim stüdyosu <span class="line"></span> 2026</div>
-        <h1>yazılımla alakalı<br><span class="gradient-text">konu varsa numaramızı engelleyin.</span></h1>
-        <p class="hero-copy">web siteleri, marka kimlikleri ve arayüzler. hazır ürünlerden özel projelere kadar dijital dünyada ihtiyacın olanı burada bul.</p>
-        <div class="hero-buttons">
-          <a href="#web" data-page="web" class="primary-btn magnetic page-link">
-            vitrine göz at <span>↗</span>
-          </a>
-          <button class="ghost-btn magnetic" data-modal="contact">proje anlat <span>→</span></button>
+      <div class="hero-orb orb-a"></div>
+      <div class="hero-orb orb-b"></div>
+
+      <div class="hero-wrapper">
+        <div class="hero-card-wrap">
+          <div class="hero-image-frame">
+            <img src="assets/images/fox.png" alt="Rahuis Mascot">
+            <div class="hero-frame-glow"></div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div><strong data-count="3">0</strong><span>proje</span></div>
-          <div><strong data-count="3">0</strong><span>marka</span></div>
-          <div><strong data-count="99">0</strong><span>memnuniyet</span></div>
+
+        <div class="hero-content">
+          <div class="eyebrow-pill">
+            <span class="status-dot"></span>
+            <span>dijital üretim stüdyosu · 2026</span>
+          </div>
+
+          <h1>yazılımla alakalı<br><span class="gradient-text">konu varsa numaramızı engelleyin.</span></h1>
+
+          <p class="hero-copy">web siteleri, marka kimlikleri ve arayüzler. hazır ürünlerden özel projelere kadar dijital dünyada ihtiyacın olanı burada bul.</p>
+
+          <div class="hero-buttons">
+            <a href="#web" data-page="web" class="primary-btn magnetic page-link">
+              vitrine göz at <span>↗</span>
+            </a>
+            <button class="ghost-btn magnetic" data-modal="contact">proje anlat <span>→</span></button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <strong data-count="3">0</strong>
+              <span>proje</span>
+            </div>
+            <div class="stat-box">
+              <strong data-count="3">0</strong>
+              <span>marka</span>
+            </div>
+            <div class="stat-box">
+              <strong data-count="99">0</strong>
+              <span>memnuniyet</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="hero-card-wrap">
-        <img src="assets/images/fox.png" alt="rahuis">
       </div>
     </section>
 
-    <section class="ticker"><div><span>web</span> — <span>design</span> — <span>branding</span> — <span>ui/ux</span> — <span>creative</span> — <span>web</span> — <span>design</span> — <span>branding</span> — <span>ui/ux</span> —</div></section>
+    <section class="ticker">
+      <div><span>web</span> — <span>design</span> — <span>branding</span> — <span>ui/ux</span> — <span>creative</span> — <span>web</span> — <span>design</span> — <span>branding</span> — <span>ui/ux</span> —</div>
+    </section>
 
+    <!-- PROJELER PREVIEW -->
     <section class="section reveal" id="web-preview">
       <div class="section-head">
-          <div>
+        <div>
           <span class="section-number">01</span>
           <h2>Yaptığımız İşler</h2>
-          </div>
-
-          <a class="view-all page-link" href="#web" data-page="web">
-            <span>Tümünü Gör <span>↗</span></span>
-          </a>
+        </div>
+        <a class="view-all page-link" href="#web" data-page="web">
+          <span>Tümünü Gör <span>↗</span></span>
+        </a>
       </div>
 
       <div class="product-grid">
-
-          <article class="product-card tilt-card"
-          data-category="web"
-          data-title="noir portfolio">
-
+        <article class="product-card tilt-card" data-category="web" data-title="studio alsancak">
           <div class="product-image">
             <a target="_blank" href="https://studioalsancak.com">
-              <img
-              src="/assets/images/stdalsancak.png" style="width: 100%;">
-
-              <div class="product-hover">
-                incele <span>↗</span>
-              </div>
+              <img src="/assets/images/stdalsancak.png" alt="Studio Alsancak">
+              <div class="product-hover">incele <span>↗</span></div>
             </a>
           </div>
-
           <div class="product-meta">
-              <div>
+            <div>
               <span class="tag">web</span>
               <h3>Studio Alsancak Web Sitesi</h3>
               <p>Bir kayıt & kurgu stüdyo sitesi</p>
-              </div>
+            </div>
           </div>
+        </article>
 
-          </article>
-
-
-          <article class="product-card tilt-card"
-          data-category="web"
-          data-title="orbit dashboard">
-
+        <article class="product-card tilt-card" data-category="web" data-title="katassen">
           <div class="product-image">
             <a target="_blank" href="https://katassen.org">
-              <img
-              src="/assets/images/katassen.png" style="width: 100%;">
-
-              <div class="product-hover">
-                incele <span>↗</span>
-              </div>
+              <img src="/assets/images/katassen.png" alt="Katassen">
+              <div class="product-hover">incele <span>↗</span></div>
             </a>
           </div>
-
           <div class="product-meta">
-              <div>
+            <div>
               <span class="tag">web</span>
               <h3>Karayolları Taşıma İşçileri Sendikası Web Sitesi</h3>
               <p>Sendika sitesi</p>
-              </div>
+            </div>
           </div>
+        </article>
 
-          </article>
-
-
-          <article class="product-card tilt-card"
-          data-category="web"
-          data-title="motion agency">
-
+        <article class="product-card tilt-card" data-category="web" data-title="misafir kitabevi">
           <div class="product-image">
             <a target="_blank" href="https://misafirkitabevi.com">
-              <img
-              src="/assets/images/misafirkitabevi.png" style="width: 100%;">
-
-              <div class="product-hover">
-                incele <span>↗</span>
-              </div>
+              <img src="/assets/images/misafirkitabevi.png" alt="Misafir Kitabevi">
+              <div class="product-hover">incele <span>↗</span></div>
             </a>
           </div>
-
           <div class="product-meta">
-              <div>
+            <div>
               <span class="tag">web</span>
-              <h3>Misafir kitabevi web sitesi</h3>
+              <h3>Misafir Kitabevi Web Sitesi</h3>
               <p>Kitap satış sitesi</p>
-              </div>
+            </div>
           </div>
-
-          </article>
-
-      </div>
-    </section>
-<!--
-    <section class="section reveal" id="tasarim">
-      <div class="section-head"><div><span class="section-number">02</span><h2>tasarım vitrini</h2></div><a href="#" class="view-all">tümünü gör <span>↗</span></a></div>
-      <div class="wide-grid">
-        <article class="feature-product tilt-card">
-          <div class="feature-visual gradient-art"><div class="gi-circle"></div><div class="gi-text">FORM<br>FOLLOWS<br>FEELING<span>.</span></div></div>
-          <div class="feature-info"><div><span class="tag">ui/ux</span><h3>studio interface kit</h3><p>80+ component · figma · responsive</p></div><strong>₺2.400</strong></div>
-        </article>
-        <article class="feature-product tilt-card">
-          <div class="feature-visual poster-art"><div class="poster-small">HERA / 026</div><div class="poster-big">STAY<br>CURIOUS</div></div>
-          <div class="feature-info"><div><span class="tag">graphic</span><h3>editorial poster pack</h3><p>12 premium poster concept</p></div><strong>₺950</strong></div>
         </article>
       </div>
     </section>
 
-    <section class="section reveal" id="logo">
-      <div class="section-head"><div><span class="section-number">03</span><h2>logo & marka</h2></div><a href="#" class="view-all">koleksiyonu gör <span>↗</span></a></div>
-      <div class="logo-grid">
-        <div class="logo-tile"><span>h</span><small>hera / mark 01</small></div>
-        <div class="logo-tile"><span>∞</span><small>orbit / mark 02</small></div>
-        <div class="logo-tile"><span>◈</span><small>mono / mark 03</small></div>
-        <div class="logo-tile"><span>✳</span><small>nova / mark 04</small></div>
-      </div>
-    </section>
--->
+    <!-- CTA DESTEK -->
     <section class="cta-section reveal" id="destek">
       <div class="cta-lines"></div>
       <span class="section-number">02</span>
@@ -231,1183 +187,635 @@
       <button class="primary-btn magnetic" data-modal="contact">projen için konuşalım <span>↗</span></button>
     </section>
 
-
-
-
-
-
-
-
-    <!-- Yaptığımız işler -->
+    <!-- YAPTIGIMIZ ISLER (INTERNAL PAGE) -->
     <section class="internal-page" id="web">
+      <div class="internal-page-head">
+        <div>
+          <span class="section-number">01</span>
+          <span class="eyebrow">portfolio</span>
+          <h2>Yaptığımız İşler</h2>
+          <p>Bugüne kadar geliştirdiğimiz ve tasarladığımız web projeleri.</p>
+        </div>
+      </div>
 
-        <div class="internal-page-head">
-
+      <div class="product-grid">
+        <article class="product-card tilt-card" data-category="web" data-title="studio alsancak">
+          <div class="product-image">
+            <a target="_blank" href="https://studioalsancak.com">
+              <img src="/assets/images/stdalsancak.png" alt="Studio Alsancak">
+              <div class="product-hover">incele <span>↗</span></div>
+            </a>
+          </div>
+          <div class="product-meta">
             <div>
-                <span class="section-number">01</span>
-
-                <span class="eyebrow">
-                    portfolio
-                </span>
-
-                <h2>Yaptığımız İşler</h2>
-
-                <p>
-                    Bugüne kadar geliştirdiğimiz ve tasarladığımız
-                    web projeleri.
-                </p>
+              <span class="tag">web</span>
+              <h3>Studio Alsancak Web Sitesi</h3>
+              <p>Bir kayıt & kurgu stüdyo sitesi</p>
             </div>
+          </div>
+        </article>
 
-        </div>
+        <article class="product-card tilt-card" data-category="web" data-title="katassen">
+          <div class="product-image">
+            <a target="_blank" href="https://katassen.org">
+              <img src="/assets/images/katassen.png" alt="Katassen">
+              <div class="product-hover">incele <span>↗</span></div>
+            </a>
+          </div>
+          <div class="product-meta">
+            <div>
+              <span class="tag">web</span>
+              <h3>Karayolları Taşıma İşçileri Sendikası Web Sitesi</h3>
+              <p>Sendika sitesi</p>
+            </div>
+          </div>
+        </article>
 
+        <article class="product-card tilt-card" data-category="web" data-title="misafir kitabevi">
+          <div class="product-image">
+            <a target="_blank" href="https://misafirkitabevi.com">
+              <img src="/assets/images/misafirkitabevi.png" alt="Misafir Kitabevi">
+              <div class="product-hover">incele <span>↗</span></div>
+            </a>
+          </div>
+          <div class="product-meta">
+            <div>
+              <span class="tag">web</span>
+              <h3>Misafir Kitabevi Web Sitesi</h3>
+              <p>Kitap satış sitesi</p>
+            </div>
+          </div>
+        </article>
+      </div>
 
-        <div class="product-grid">
-
-            <article class="product-card tilt-card"
-                data-category="web"
-                data-title="studio alsancak">
-
-                <div class="product-image">
-                    <a target="_blank" href="https://studioalsancak.com">
-                        <img
-                            src="/assets/images/stdalsancak.png"
-                            style="width:100%;"
-                        >
-
-                        <div class="product-hover">
-                            incele <span>↗</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="product-meta">
-                    <div>
-                        <span class="tag">web</span>
-                        <h3>Studio Alsancak Web Sitesi</h3>
-                        <p>Bir kayıt & kurgu stüdyo sitesi</p>
-                    </div>
-                </div>
-
-            </article>
-
-
-            <article class="product-card tilt-card"
-                data-category="web"
-                data-title="katassen">
-
-                <div class="product-image">
-                    <a target="_blank" href="https://katassen.org">
-                        <img
-                            src="/assets/images/katassen.png"
-                            style="width:100%;"
-                        >
-
-                        <div class="product-hover">
-                            incele <span>↗</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="product-meta">
-                    <div>
-                        <span class="tag">web</span>
-                        <h3>Karayolları Taşıma İşçileri Sendikası Web Sitesi</h3>
-                        <p>Sendika sitesi</p>
-                    </div>
-                </div>
-
-            </article>
-
-
-            <article class="product-card tilt-card"
-                data-category="web"
-                data-title="misafir kitabevi">
-
-                <div class="product-image">
-                    <a target="_blank" href="https://misafirkitabevi.com">
-                        <img
-                            src="/assets/images/misafirkitabevi.png"
-                            style="width:100%;"
-                        >
-
-                        <div class="product-hover">
-                            incele <span>↗</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="product-meta">
-                    <div>
-                        <span class="tag">web</span>
-                        <h3>Misafir Kitabevi Web Sitesi</h3>
-                        <p>Kitap satış sitesi</p>
-                    </div>
-                </div>
-
-            </article>
-
-
-            <!-- BURADAN SONRA DIGER PROJELERINI EKLE -->
-
-        </div>
-
-          <section class="cta-section reveal" id="destek">
-            <div class="cta-lines"></div>
-            <span class="section-number">02</span>
-            <h2>
-              sende böyle siteler istiyosan<br>
-              <span>gel yapalım</span>
-            </h2>
-            <p>hazır bir ürün seç veya sıfırdan bir şey tasarlayalım.</p>
-            <button class="primary-btn magnetic" data-modal="contact">projen için konuşalım <span>↗</span></button>
-          </section>         
-
-
-
-
+      <section class="cta-section reveal">
+        <div class="cta-lines"></div>
+        <span class="section-number">02</span>
+        <h2>sende böyle siteler istiyosan<br><span>gel yapalım</span></h2>
+        <p>hazır bir ürün seç veya sıfırdan bir şey tasarlayalım.</p>
+        <button class="primary-btn magnetic" data-modal="contact">projen için konuşalım <span>↗</span></button>
+      </section>
     </section>
 
-
-
-
-
-
-
-
-
-    <!-- hakkımızda -->
+    <!-- HAKKIMIZDA -->
     <section class="internal-page" id="hakkimizda">
+      <div class="page-header reveal">
+        <span class="eyebrow">hera software</span>
+        <h1>hakkımızda<span>.</span></h1>
+        <p class="page-lead">fikirleri dijital deneyimlere dönüştürüyoruz.</p>
+      </div>
 
-        <div class="page-header reveal">
-            <span class="eyebrow">hera software</span>
-
-            <h1>
-                hakkımızda<span>.</span>
-            </h1>
-
-            <p class="page-lead">
-                fikirleri dijital deneyimlere dönüştürüyoruz.
-            </p>
+      <div class="about-content">
+        <div class="about-main reveal">
+          <span class="about-number">01</span>
+          <h2>sadece web sitesi <strong>yapmıyoruz.</strong></h2>
+          <p>hera software, markaların ve girişimlerin dijital dünyada kendini daha iyi ifade edebilmesi icin modern web deneyimleri tasarlayan ve gelistiren bir yazılım ekibidir.</p>
+          <p>bizim için bir web sitesi sadece güzel gorunen bir sayfa degil; markanın karakterini yansitan, kullanıcıya güven veren ve amacına hizmet eden bir deneyimdir.</p>
         </div>
 
-
-        <div class="about-content">
-
-            <div class="about-main reveal">
-
-                <span class="about-number">01</span>
-
-                <h2>
-                    sadece web sitesi
-                    <strong>yapmıyoruz.</strong>
-                </h2>
-
-                <p>
-                    hera software, markaların ve girişimlerin dijital dünyada
-                    kendini daha iyi ifade edebilmesi icin modern web deneyimleri
-                    tasarlayan ve gelistiren bir yazılım ekibidir.
-                </p>
-
-                <p>
-                    bizim için bir web sitesi sadece güzel gorunen bir sayfa degil;
-                    markanın karakterini yansitan, kullanıcıya güven veren ve
-                    amacına hizmet eden bir deneyimdir.
-                </p>
-
+        <div class="about-side reveal">
+          <div class="about-card">
+            <span class="about-card-number">01</span>
+            <div>
+              <small>tasarım</small>
+              <h3>karakter sahibi</h3>
+              <p>her projeye kendi kimliğini kazandıran, modern ve dikkat çekici arayüzler.</p>
             </div>
-
-
-            <div class="about-side reveal">
-
-                <div class="about-card">
-                    <span class="about-card-number">01</span>
-
-                    <div>
-                        <small>tasarım</small>
-                        <h3>karakter sahibi</h3>
-                        <p>
-                            her projeye kendi kimliğini kazandıran,
-                            modern ve dikkat çekici arayüzler.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="about-card">
-                    <span class="about-card-number">02</span>
-
-                    <div>
-                        <small>geliştirme</small>
-                        <h3>güçlü altyapı</h3>
-                        <p>
-                            hızlı, responsive ve amacına uygun
-                            web deneyimleri.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="about-card">
-                    <span class="about-card-number">03</span>
-
-                    <div>
-                        <small>deneyim</small>
-                        <h3>detaylarda fark</h3>
-                        <p>
-                            animasyonlardan etkileşimlere kadar
-                            her detayı düşünüyoruz.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="about-bottom reveal">
-
-            <div class="about-statement">
-                <span>bizim için</span>
-
-                <h2>
-                    sade.<br>
-                    etkileyici.<br>
-                    <strong>işlevsel.</strong>
-                </h2>
-            </div>
-
-
-            <div class="about-text">
-
-                <p>
-                    hazır kalıplara bağlanmak yerine her projeye kendi
-                    kimliğini kazandırmayı seviyoruz.
-                </p>
-
-                <p>
-                    ister yeni bir marka kuruyor olun, ister mevcut
-                    projenizi bir sonraki seviyeye taşımak isteyin;
-                    fikrinizi birlikte gerçeğe dönüştürüyoruz.
-                </p>
-
-                <div class="about-signature">
-                    <span>hera software</span>
-                    <small>aklindaki web sitesi.</small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ekip -->
-    <section class="internal-page" id="ekip">
-
-      <div class="internal-page-head reveal">
-
-          <div>
-              <span class="section-number">05</span>
-
-              <span class="eyebrow">
-                  hera software
-              </span>
-
-              <h2>
-                  ekibimiz
-              </h2>
-
-              <p>
-                  fikri ortaya atanlardan, onu gerçeğe dönüştürenlere kadar
-                  hera'nın arkasındaki ekip.
-              </p>
           </div>
 
+          <div class="about-card">
+            <span class="about-card-number">02</span>
+            <div>
+              <small>geliştirme</small>
+              <h3>güçlü altyapı</h3>
+              <p>hızlı, responsive ve amacına uygun web deneyimleri.</p>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <span class="about-card-number">03</span>
+            <div>
+              <small>deneyim</small>
+              <h3>detaylarda fark</h3>
+              <p>animasyonlardan etkileşimlere kadar her detayı düşünüyoruz.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <div class="about-bottom reveal">
+        <div class="about-statement">
+          <span>bizim için</span>
+          <h2>sade.<br>etkileyici.<br><strong>işlevsel.</strong></h2>
+        </div>
+
+        <div class="about-text">
+          <p>hazır kalıplara bağlanmak yerine her projeye kendi kimliğini kazandırmayı seviyoruz.</p>
+          <p>ister yeni bir marka kuruyor olun, ister mevcut projenizi bir sonraki seviyeye taşımak isteyin; fikrinizi birlikte gerçeğe dönüştürüyoruz.</p>
+          <div class="about-signature">
+            <span>hera software</span>
+            <small>aklindaki web sitesi.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EKİP -->
+    <section class="internal-page" id="ekip">
+      <div class="internal-page-head reveal">
+        <div>
+          <span class="section-number">05</span>
+          <span class="eyebrow">hera software</span>
+          <h2>ekibimiz</h2>
+          <p>fikri ortaya atanlardan, onu gerçeğe dönüştürenlere kadar hera'nın arkasındaki ekip.</p>
+        </div>
+      </div>
 
       <div class="team-grid">
-
-          <article class="team-card tilt-card">
-
-              <div class="team-image">
-                  <img src="assets/images/görsel_2026-09-16_223634191.png" alt="ekip üyesi">
-              </div>
-
-              <div class="team-info">
-
-                  <div>
-                      <span class="tag">
-                          founder
-                      </span>
-
-                      <h3>
-                          kawaiidut
-                      </h3>
-
-                      <p>
-                          web developer / designer
-                      </p>
-                      <br>
-                      <div class="pp-links">
-                        <a class="pplink instalink" target="_blank" href="https://www.instagram.com/kawaiidut/">Instagram↗</a>
-                        <a class="pplink xitterlink" target="_blank" href="https://x.com/kawaiidut">Xitter↗</a>
-                        <a class="pplink youtubelink" target="_blank" href="https://www.youtube.com/@kawaiidut">Youtube↗</a>
-                        <a class="pplink xitterlink" target="_blank" href="https://github.com/kawaiidut">Github↗</a>
-                      </div>
-                  </div>
-
-                  <span class="team-number">
-                      01
-                  </span>
-
-              </div>
-
-          </article>
-          
-
-          <article class="team-card tilt-card">
-
-              <div class="team-image">
-                  <img src="assets/images/sparkles.webp" alt="ekip üyesi">
-              </div>
-
-              <div class="team-info">
-
-                  <div>
-                      <span class="tag">
-                          backend developer
-                      </span>
-
-                      <h3>
-                          sparkles-laurel
-                      </h3>
-
-                      <p>
-                          backend developer
-                      </p>
-
-                      <br>
-                      <div class="pp-links">
-                        <a class="pplink fediverselink" target="_blank" href="https://ck.catwithaclari.net/@sparkles">Fediverse↗</a>
-                        <a class="pplink xitterlink" target="_blank" href="https://github.com/sparkles-laurel">Github↗</a>
-                        <a class="pplink fediverselink" target="_blank" href="mailto:afet@config.gay">Mail↗</a>
-                      </div>
-                      
-                  </div>
-
-                  <span class="team-number">
-                      03
-                  </span>
-
-              </div>
-
-          </article>
-
-
-          <article class="team-card tilt-card">
-
-              <div class="team-image">
-                  <img src="assets/images/ada.webp" alt="ekip üyesi">
-              </div>
-
-              <div class="team-info">
-
-                  <div>
-                      <span class="tag">
-                          Frontend developer
-                      </span>
-
-                      <h3>
-                          Adosa284 
-                      </h3>
-
-                      <p>
-                          ui/ux & visual design
-                      </p>
-                      <br>
-                      <div class="pp-links">
-                        <a class="pplink xitterlink" target="_blank" href="https://github.com/aDoSa284">Github↗</a>
-                        <a class="pplink xitterlink" target="_blank" href="https://x.com/adosa284">Xitter↗</a>
-                        <a class="pplink youtubelink" target="_blank" href="https://www.youtube.com/@adosa284">Youtube↗</a>
-                      </div>
-                      
-                  </div> 
-
-                  <span class="team-number">
-                      04
-                  </span>
-
-              </div>
-
-          </article>
-
-      </div>
-
-    </section>
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    <!-- whyhera -->
-
-    <section class="internal-page" id="whyhera">
-
-        <div class="page-header reveal">
-            <span class="eyebrow">why hera?</span>
-
-            <h1>
-                neden hera<span>?</span>
-            </h1>
-
-            <p class="page-lead">
-                sadece bir web sitesi değil,
-                markanızın dijital kimliğini inşa ediyoruz.
-            </p>
-        </div>
-
-
-        <div class="whyhera-intro reveal">
-
-            <div class="whyhera-intro-number">
-                01
-            </div>
-
-            <div class="whyhera-intro-content">
-
-                <h2>
-                    internette var olmak
-                    <strong>yetmez.</strong>
-                </h2>
-
-                <p>
-                    insanlar markanızı ilk kez web sitenizle tanıyabilir.
-                    bu nedenle iyi bir web sitesi sadece güzel görünmemeli;
-                    ne yaptığınızı anlatmalı, güven vermeli ve akılda kalmalıdır.
-                </p>
-
-                <p>
-                    biz her projeyi sadece kodlanacak bir sayfa olarak değil,
-                    markanın dijitaldeki yüzü olarak ele alıyoruz.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="whyhera-grid">
-
-            <article class="whyhera-card reveal">
-
-                <div class="whyhera-card-top">
-                    <span>01</span>
-                    <span>01 / 05</span>
-                </div>
-
-                <div class="whyhera-icon">
-                    ✦
-                </div>
-
-                <h3>
-                    size özel
-                </h3>
-
-                <p>
-                    her projeyi sıfırdan ele alıyoruz.
-                    hazır şablonlar yerine markanızın karakterine
-                    ve ihtiyaçlarına uygun arayüzler tasarlıyoruz.
-                </p>
-
-            </article>
-
-
-            <article class="whyhera-card reveal">
-
-                <div class="whyhera-card-top">
-                    <span>02</span>
-                    <span>02 / 05</span>
-                </div>
-
-                <div class="whyhera-icon">
-                    ◇
-                </div>
-
-                <h3>
-                    modern tasarım
-                </h3>
-
-                <p>
-                    sade ama sıradan olmayan tasarımlar.
-                    tipografi, renk, boşluk ve etkileşimleri
-                    bir bütün olarak ele alıyoruz.
-                </p>
-
-            </article>
-
-
-            <article class="whyhera-card reveal">
-
-                <div class="whyhera-card-top">
-                    <span>03</span>
-                    <span>03 / 05</span>
-                </div>
-
-                <div class="whyhera-icon">
-                    ↗
-                </div>
-
-                <h3>
-                    performans
-                </h3>
-
-                <p>
-                    güzel görünmesinin yanında hızlı ve akıcı
-                    çalışan web siteleri geliştiriyoruz.
-                    masaüstünden mobile kadar her ekranı düşünüyoruz.
-                </p>
-
-            </article>
-
-
-            <article class="whyhera-card reveal">
-
-                <div class="whyhera-card-top">
-                    <span>04</span>
-                    <span>04 / 05</span>
-                </div>
-
-                <div class="whyhera-icon">
-                    ∞
-                </div>
-
-                <h3>
-                    detaylar
-                </h3>
-
-                <p>
-                    hover efektlerinden sayfa geçişlerine,
-                    mikro animasyonlardan kullanıcı deneyimine kadar
-                    farkı yaratan küçük detaylara odaklanıyoruz.
-                </p>
-
-            </article>
-
-
-            <article class="whyhera-card reveal">
-
-                <div class="whyhera-card-top">
-                    <span>05</span>
-                    <span>05 / 05</span>
-                </div>
-
-                <div class="whyhera-icon">
-                    +
-                </div>
-
-                <h3>
-                    birlikte geliştiriyoruz
-                </h3>
-
-                <p>
-                    proje teslim edilince hikâye bitmiyor.
-                    ihtiyaçlarınız değiştikçe sitenizi geliştirmeye
-                    ve yeni fikirlerinizi hayata geçirmeye devam ediyoruz.
-                </p>
-
-            </article>
-
-        </div>
-
-
-        <div class="whyhera-statement reveal">
-
-            <div class="whyhera-statement-label">
-                neden hera?
-            </div>
-
-            <div class="whyhera-statement-text">
-                <span>çünkü</span>
-                <strong>
-                    sıradan olmak
-                    zorunda değilsiniz.
-                </strong>
-            </div>
-
-        </div>
-
-
-        <div class="whyhera-process reveal">
-
-            <div class="whyhera-process-heading">
-
-                <span class="eyebrow">
-                    nasıl bakıyoruz?
-                </span>
-
-                <h2>
-                    fikirden
-                    <strong>deneyime.</strong>
-                </h2>
-
-            </div>
-
-
-            <div class="whyhera-process-list">
-
-                <div class="whyhera-process-item">
-
-                    <span>01</span>
-
-                    <div>
-                        <h3>dinliyoruz</h3>
-                        <p>
-                            neye ihtiyacınız olduğunu,
-                            neyi hedeflediğinizi ve markanızın
-                            ne anlatmak istediğini anlamaya çalışıyoruz.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="whyhera-process-item">
-
-                    <span>02</span>
-
-                    <div>
-                        <h3>tasarlıyoruz</h3>
-                        <p>
-                            fikri bir arayüze dönüştürüyor,
-                            kullanıcı deneyimini ve görsel dili
-                            birlikte kurguluyoruz.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="whyhera-process-item">
-
-                    <span>03</span>
-
-                    <div>
-                        <h3>geliştiriyoruz</h3>
-                        <p>
-                            tasarımı gerçek bir web deneyimine
-                            dönüştürüyor, performans ve responsive
-                            yapısını optimize ediyoruz.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="whyhera-process-item">
-
-                    <span>04</span>
-
-                    <div>
-                        <h3>geliştirmeye devam ediyoruz</h3>
-                        <p>
-                            yayın sonrası geri bildirimleri
-                            değerlendiriyor ve projenin gelişimini
-                            birlikte sürdürüyoruz.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="whyhera-final reveal">
-
-            <span>hera software</span>
-
-            <h2>
-                aklınızdaki web sitesi
-                <strong>burada başlar.</strong>
-            </h2>
-
-            <a href="#destek" class="primary-btn magnetic" data-modal="contact">
-                projenizi konuşalım
-                <span>↗</span>
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-    <!-- teknolojiler -->
-
-    <section class="internal-page" id="teknolojiler">
-
-        <div class="page-header reveal">
-            <span class="eyebrow">our stack</span>
-
-            <h1>
-                teknolojiler<span>.</span>
-            </h1>
-
-            <p class="page-lead">
-                fikirleri gerçeğe dönüştürmek için
-                doğru teknolojileri kullanıyoruz.
-            </p>
-        </div>
-
-
-        <div class="tech-intro reveal">
-
-            <span class="tech-intro-number">01</span>
-
+        <article class="team-card tilt-card">
+          <div class="team-image">
+            <img src="assets/images/görsel_2026-09-16_223634191.png" alt="kawaiidut">
+          </div>
+          <div class="team-info">
             <div>
-                <h2>
-                    sadece araçlar değil,
-                    <strong>çözümler.</strong>
-                </h2>
-
-                <p>
-                    her projenin ihtiyacı farklıdır. bu nedenle tek bir
-                    teknolojiye bağlı kalmak yerine projenin amacına,
-                    performans ihtiyaçlarına ve gelecekteki gelişimine
-                    uygun teknolojileri tercih ediyoruz.
-                </p>
+              <span class="tag">founder</span>
+              <h3>kawaiidut</h3>
+              <p>web developer / designer</p>
+              <br>
+              <div class="pp-links">
+                <a class="pplink instalink" target="_blank" href="https://www.instagram.com/kawaiidut/">Instagram↗</a>
+                <a class="pplink xitterlink" target="_blank" href="https://x.com/kawaiidut">Xitter↗</a>
+                <a class="pplink youtubelink" target="_blank" href="https://www.youtube.com/@kawaiidut">Youtube↗</a>
+                <a class="pplink xitterlink" target="_blank" href="https://github.com/kawaiidut">Github↗</a>
+              </div>
             </div>
+            <span class="team-number">01</span>
+          </div>
+        </article>
 
-        </div>
-
-
-        <div class="tech-grid">
-
-            <article class="tech-card reveal">
-
-                <div class="tech-card-top">
-                    <span>01</span>
-                    <span>frontend</span>
-                </div>
-
-                <div class="tech-logo tech-js">
-                    <img src="assets/images/jslogo.png" style="width: 100%;">
-                </div>
-
-                <div class="tech-card-content">
-                    <h3>javascript</h3>
-
-                    <p>
-                        etkileşimli, dinamik ve modern web deneyimleri
-                        için kullanıyoruz.
-                    </p>
-                </div>
-
-                <div class="tech-card-line"></div>
-
-            </article>
-
-
-            <article class="tech-card reveal">
-
-                <div class="tech-card-top">
-                    <span>02</span>
-                    <span>backend</span>
-                </div>
-
-                <div class="tech-logo tech-php">
-                    <img src="assets/images/phplogo.png" style="width: 100%;">
-                </div>
-
-                <div class="tech-card-content">
-                    <h3>php</h3>
-
-                    <p>
-                        sunucu taraflı uygulamalar, api sistemleri ve
-                        dinamik web projeleri geliştiriyoruz.
-                    </p>
-                </div>
-
-                <div class="tech-card-line"></div>
-
-            </article>
-
-
-            <article class="tech-card reveal">
-
-                <div class="tech-card-top">
-                    <span>03</span>
-                    <span>structure</span>
-                </div>
-
-                <div class="tech-logo tech-html">
-                    <img src="assets/images/htmllogo.webp" style="width: 100%;">
-                </div>
-
-                <div class="tech-card-content">
-                    <h3>html</h3>
-
-                    <p>
-                        semantik, erişilebilir ve sağlam web yapıları
-                        oluşturuyoruz.
-                    </p>
-                </div>
-
-                <div class="tech-card-line"></div>
-
-            </article>
-
-
-            <article class="tech-card reveal">
-
-                <div class="tech-card-top">
-                    <span>04</span>
-                    <span>styling</span>
-                </div>
-
-                <div class="tech-logo tech-css">
-                    <img src="assets/images/csslogo.png" style="width: 100%;">
-                </div>
-
-                <div class="tech-card-content">
-                    <h3>css</h3>
-
-                    <p>
-                        responsive tasarımlar, animasyonlar ve detaylı
-                        kullanıcı deneyimleri geliştiriyoruz.
-                    </p>
-                </div>
-
-                <div class="tech-card-line"></div>
-
-            </article>
-
-
-            <article class="tech-card tech-rust-card reveal">
-
-                <div class="tech-card-top">
-                    <span>05</span>
-                    <span>systems</span>
-                </div>
-
-                <div class="tech-logo tech-rust">
-                    <img src="assets/images/rust.jfif" style="width: 100%;">
-                </div>
-
-                <div class="tech-card-content">
-                    <h3>rust</h3>
-
-                    <p>
-                        performans, güvenlik ve sistem seviyesinde
-                        güçlü çözümler için kullanıyoruz.
-                    </p>
-                </div>
-
-                <div class="tech-card-line"></div>
-
-            </article>
-
-        </div>
-
-
-        <div class="tech-bottom reveal">
-
-            <div class="tech-bottom-label">
-                <span>hera software</span>
-                <span>05 technologies</span>
+        <article class="team-card tilt-card">
+          <div class="team-image">
+            <img src="assets/images/sparkles.webp" alt="sparkles-laurel">
+          </div>
+          <div class="team-info">
+            <div>
+              <span class="tag">backend developer</span>
+              <h3>sparkles-laurel</h3>
+              <p>backend developer</p>
+              <br>
+              <div class="pp-links">
+                <a class="pplink fediverselink" target="_blank" href="https://ck.catwithaclari.net/@sparkles">Fediverse↗</a>
+                <a class="pplink xitterlink" target="_blank" href="https://github.com/sparkles-laurel">Github↗</a>
+                <a class="pplink fediverselink" target="_blank" href="mailto:afet@config.gay">Mail↗</a>
+              </div>
             </div>
+            <span class="team-number">03</span>
+          </div>
+        </article>
 
-            <div class="tech-bottom-content">
-
-                <h2>
-                    doğru teknoloji.
-                    <strong>doğru deneyim.</strong>
-                </h2>
-
-                <p>
-                    teknolojiyi göstermek için değil, probleme en doğru
-                    çözümü üretmek için kullanıyoruz.
-                </p>
-
+        <article class="team-card tilt-card">
+          <div class="team-image">
+            <img src="assets/images/ada.webp" alt="Adosa284">
+          </div>
+          <div class="team-info">
+            <div>
+              <span class="tag">Frontend developer</span>
+              <h3>Adosa284</h3>
+              <p>ui/ux & visual design</p>
+              <br>
+              <div class="pp-links">
+                <a class="pplink xitterlink" target="_blank" href="https://github.com/aDoSa284">Github↗</a>
+                <a class="pplink xitterlink" target="_blank" href="https://x.com/adosa284">Xitter↗</a>
+                <a class="pplink youtubelink" target="_blank" href="https://www.youtube.com/@adosa284">Youtube↗</a>
+              </div>
             </div>
-
-        </div>
-
-    </section>
-
-
-
-<!-- paketler -->
-    <section class="internal-page" id="paketler">
-
-        <div class="page-header reveal">
-            <span class="eyebrow">çözüm ve paketler</span>
-
-            <h1>
-                paketler<span>.</span>
-            </h1>
-
-            <p class="page-lead">
-                ihtiyacınıza uygun hazır ve özel web çözümleri.
-            </p>
-        </div>
-
-
-        <div class="whyhera-intro reveal">
-
-            <div class="whyhera-intro-number">
-                01
-            </div>
-
-            <div class="whyhera-intro-content">
-
-                <h2>
-                    şeffaf ve net
-                    <strong>fiyatlandırma.</strong>
-                </h2>
-
-                <p>
-                    başlangıç ve kurumsal paketlerimizde sadece tasarım ve yazılım hizmeti verilir, hosting/domain müşteriye aittir.
-                </p>
-
-                <p>
-                    gelişmiş ve özel projelerimizde ise 1 yıllık yüksek hızlı sunucu, altyapı ve .com domain maliyetleri paket fiyatına dahildir.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="packages-grid">
-
-            <!-- PAKET 1 -->
-            <article class="package-card reveal">
-
-                <div class="package-card-top">
-                    <span class="tag">01 / başlangıç</span>
-                    <span class="badge off">HeraSoft</span>
-                </div>
-
-                <div class="package-header">
-                    <h3>Landing & Vitrin Sayfası</h3>
-                    <p>Kişisel portfolyolar, tek sayfa tanıtımlar ve hızlı dijital kartvizitler için.</p>
-                </div>
-
-                <div class="package-price-box">
-                    <div class="price-main">
-                      ₺12.500 
-                      <small>/ proje başı</small> <br>
-                      +₺5.000<br>
-                      <small> /domain & hosting</small>
-                    </div>
-                </div>
-
-                <ul class="package-features">
-                    <li>✦ 1 Sayfa Modern & Responsive Tasarım</li>
-                    <li>✦ Müşteri Domain & Hostingine Kurulum</li>
-                    <li>✦ Ücretsiz SSL Sertifikası & Temel SEO</li>
-                    <li>✦ WhatsApp & İletişim Butonları Entegrasyonu</li>
-                    <li>✦ Mobil & Tablet Uyumlu Arayüz</li>
-                    <li>✦ 1 Hafta İçerisinde Teslim</li>
-                </ul>
-
-                <button class="primary-btn magnetic" data-modal="contact">
-                    bu paketi seç <span>↗</span>
-                </button>
-
-            </article>
-
-
-            <!-- PAKET 2 -->
-            <article class="package-card reveal featured">
-
-                <div class="package-card-top">
-                    <span class="tag">02 / popüler</span>
-                    <span class="badge off">HeraSoft</span>
-                </div>
-
-                <div class="package-header">
-                    <h3>Kurumsal Web Sitesi</h3>
-                    <p>Küçük ve orta ölçekli firmalar, dernekler ve stüdyolar için ideal çok sayfalı çözüm.</p>
-                </div>
-
-                <div class="package-price-box">
-                    <div class="price-main">
-                      ₺35.000 
-                      <small>/ proje başı</small><br>
-                      +₺5.000<br>
-                      <small> /domain & hosting</small>
-                    </div>
-                </div>
-
-                <ul class="package-features">
-                    <li>✦ 5 Sayfaya Kadar Özel Tasarım (Hakkımızda, Hizmetler vb.)</li>
-                    <li>✦ Müşteri Sunucusuna / Hostingine Kurulum</li>
-                    <li>✦ Dinamik Yönetim Paneli (PHP / Custom)</li>
-                    <li>✦ Detaylı SEO Optimizasyonu & Performans</li>
-                    <li>✦ İletişim Formu & Google Harita Kaydı</li>
-                    <li>✦ 1 Ay Ücretsiz Teknik Destek</li>
-                </ul>
-
-                <button class="primary-btn magnetic" data-modal="contact">
-                    bu paketi seç <span>↗</span>
-                </button>
-
-            </article>
-
-
-            <!-- PAKET 3 -->
-            <article class="package-card reveal">
-
-                <div class="package-card-top">
-                    <span class="tag">03 / gelişmiş</span>
-                    <span class="badge off">HeraSoft</span>
-                </div>
-
-                <div class="package-header">
-                    <h3>Katalog & E-Ticaret Lite</h3>
-                    <p>Ürünlerini sergilemek, katalog oluşturmak ve WhatsApp / online sipariş almak isteyenler için.</p>
-                </div>
-
-                <div class="package-price-box">
-                    <div class="price-main">
-                      ₺55.000 
-                      <small>/ proje başı</small><br>
-                      +₺5.000<br>
-                      <small> /domain & hosting</small>
-                    </div>
-                </div>
-
-                <ul class="package-features">
-                    <li>✦ Sınırsız Kategori & Ürün Kataloğu Ekleme</li>
-                    <li>✦ Online Sipariş / WhatsApp Sipariş Altyapısı</li>
-                    <li>✦ 1 Yıllık .com Domain + Pro NVMe Hosting Dahil</li>
-                    <li>✦ Gelişmiş Arama & Filtreleme Sistemleri</li>
-                    <li>✦ Detaylı SEO & Sosyal Medya Paylaşım Yapısı</li>
-                    <li>✦ 3 Ay Ücretsiz Bakım & Destek</li>
-                </ul>
-
-                <button class="primary-btn magnetic" data-modal="contact">
-                    bu paketi seç <span>↗</span>
-                </button>
-
-            </article>
-
-
-            <!-- PAKET 4 -->
-            <article class="package-card reveal">
-
-                <div class="package-card-top">
-                    <span class="tag">04 / özel</span>
-                    <span class="badge off">HeraSoft</span>
-                </div>
-
-                <div class="package-header">
-                    <h3>Özel Yazılım & Web App</h3>
-                    <p>Karmaşık iş mantığı, özel veritabanı mimarisi ve yüksek performanslı projeler için.</p>
-                </div>
-
-                <div class="package-price-box">
-                    <div class="price-main">
-                      ₺100.000 <br>
-                      <small>'den başlayan fiyatlarla</small><br>
-                      +₺5.000<br>
-                      <small> /domain & hosting</small><br><br>
-                      <small>proje kapsamı, modül sayısı ve entegrasyonlara gore fiyatlandırılır.</small>
-                    </div>
-                </div>
-
-                <ul class="package-features">
-                    <li>✦ %100 Sıfırdan Özel Tasarım & Backend (PHP / Rust / JS)</li>
-                    <li>✦ 1 Yıllık Yüksek Performanslı Cloud VPS Server + Domain Dahil</li>
-                    <li>✦ Özel Yönetim Paneli & API Entegrasyonları</li>
-                    <li>✦ Yüksek Güvenlik, Veritabanı Optimizasyonu & CDN</li>
-                    <li>✦ Marka Görsel Seti (Logo & Sosyal Medya Hazırlığı)</li>
-                    <li>✦ 6 Ay Ücretsiz Destek & Bakım Garantisi</li>
-                </ul>
-
-                <button class="primary-btn magnetic" data-modal="contact">
-                    bu paketi seç <span>↗</span>
-                </button>
-
-            </article>
-
-        </div>
-
-
-        <div class="whyhera-statement reveal" style="margin-top: 50px;">
-
-            <div class="whyhera-statement-label">
-                bilgilendirme
-            </div>
-
-            <div class="whyhera-statement-text">
-                <span>not</span>
-                <strong>
-                    ihtiyacınıza göre özel paketler ve ek modüller oluşturulabilir.
-                </strong>
-            </div>
-
-        </div>
-
-    </section>
-
-    
-    <!-- market -->
-    <section class="internal-page" id="market">
-      <div class="page-header reveal"><span class="eyebrow">hera software / market</span><h1>market<span>.</span></h1><p class="page-lead">dijital üretim sürecin için tasarlanmış ürünler.</p></div>
-      <div class="market-note reveal"><span class="market-note-icon">✦</span><div><strong>dijital ürün vitrini</strong><p>şimdilik örnek statik ürünler gösterilmektedir. ürün ve fiyat bilgileri daha sonra veritabanına bağlanabilir.</p></div></div>
-      <div class="market-grid">
-        <article class="market-product product-card tilt-card" data-title="studio interface kit" data-category="ui ux figma"><div class="market-art market-art-interface"><span>HERA / UI-01</span><strong>FORM<br>FOLLOWS<br>FEELING<span>.</span></strong><i>80+ COMPONENTS</i></div><div class="market-product-info"><div><span class="tag">ui / ux</span><h3>studio interface kit</h3><p>figma için arayüz bileşenleri ve responsive tasarım seti.</p></div><strong class="market-price">₺2.400</strong></div><button class="primary-btn add-to-cart" data-add-cart="interface-kit">sepete ekle <span>＋</span></button></article>
-        <article class="market-product product-card tilt-card" data-title="editorial poster pack" data-category="graphic tasarım"><div class="market-art market-art-poster"><span>HERA / 026</span><strong>STAY<br>CURIOUS<span>.</span></strong><i>POSTER COLLECTION</i></div><div class="market-product-info"><div><span class="tag">graphic</span><h3>editorial poster pack</h3><p>12 farklı poster konseptinden oluşan dijital tasarım paketi.</p></div><strong class="market-price">₺950</strong></div><button class="primary-btn add-to-cart" data-add-cart="poster-pack">sepete ekle <span>＋</span></button></article>
+            <span class="team-number">04</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- sepetim -->
+    <!-- NEDEN HERA -->
+    <section class="internal-page" id="whyhera">
+      <div class="page-header reveal">
+        <span class="eyebrow">why hera?</span>
+        <h1>neden hera<span>?</span></h1>
+        <p class="page-lead">sadece bir web sitesi değil, markanızın dijital kimliğini inşa ediyoruz.</p>
+      </div>
+
+      <div class="whyhera-intro reveal">
+        <div class="whyhera-intro-number">01</div>
+        <div class="whyhera-intro-content">
+          <h2>internette var olmak <strong>yetmez.</strong></h2>
+          <p>insanlar markanızı ilk kez web sitenizle tanıyabilir. bu nedenle iyi bir web sitesi sadece güzel görünmemeli; ne yaptığınızı anlatmalı, güven vermeli ve akılda kalmalıdır.</p>
+          <p>biz her projeyi sadece kodlanacak bir sayfa olarak değil, markanın dijitaldeki yüzü olarak ele alıyoruz.</p>
+        </div>
+      </div>
+
+      <div class="whyhera-grid">
+        <article class="whyhera-card reveal">
+          <div class="whyhera-card-top"><span>01</span><span>01 / 05</span></div>
+          <div class="whyhera-icon">✦</div>
+          <h3>size özel</h3>
+          <p>her projeyi sıfırdan ele alıyoruz. hazır şablonlar yerine markanızın karakterine ve ihtiyaçlarına uygun arayüzler tasarlıyoruz.</p>
+        </article>
+
+        <article class="whyhera-card reveal">
+          <div class="whyhera-card-top"><span>02</span><span>02 / 05</span></div>
+          <div class="whyhera-icon">◇</div>
+          <h3>modern tasarım</h3>
+          <p>sade ama sıradan olmayan tasarımlar. tipografi, renk, boşluk ve etkileşimleri bir bütün olarak ele alıyoruz.</p>
+        </article>
+
+        <article class="whyhera-card reveal">
+          <div class="whyhera-card-top"><span>03</span><span>03 / 05</span></div>
+          <div class="whyhera-icon">↗</div>
+          <h3>performans</h3>
+          <p>güzel görünmesinin yanında hızlı ve akıcı çalışan web siteleri geliştiriyoruz. masaüstünden mobile kadar her ekranı düşünüyoruz.</p>
+        </article>
+
+        <article class="whyhera-card reveal">
+          <div class="whyhera-card-top"><span>04</span><span>04 / 05</span></div>
+          <div class="whyhera-icon">∞</div>
+          <h3>detaylar</h3>
+          <p>hover efektlerinden sayfa geçişlerine, mikro animasyonlardan kullanıcı deneyimine kadar farkı yaratan küçük detaylara odaklanıyoruz.</p>
+        </article>
+
+        <article class="whyhera-card reveal">
+          <div class="whyhera-card-top"><span>05</span><span>05 / 05</span></div>
+          <div class="whyhera-icon">+</div>
+          <h3>birlikte geliştiriyoruz</h3>
+          <p>proje teslim edilince hikâye bitmiyor. ihtiyaçlarınız değiştikçe sitenizi geliştirmeye ve yeni fikirlerinizi hayata geçirmeye devam ediyoruz.</p>
+        </article>
+      </div>
+
+      <div class="whyhera-statement reveal">
+        <div class="whyhera-statement-label">neden hera?</div>
+        <div class="whyhera-statement-text">
+          <span>çünkü</span>
+          <strong>sıradan olmak zorunda değilsiniz.</strong>
+        </div>
+      </div>
+
+      <div class="whyhera-process reveal">
+        <div class="whyhera-process-heading">
+          <span class="eyebrow">nasıl bakıyoruz?</span>
+          <h2>fikirden <strong>deneyime.</strong></h2>
+        </div>
+        <div class="whyhera-process-list">
+          <div class="whyhera-process-item">
+            <span>01</span>
+            <div>
+              <h3>dinliyoruz</h3>
+              <p>neye ihtiyacınız olduğunu, neyi hedeflediğinizi ve markanızın ne anlatmak istediğini anlamaya çalışıyoruz.</p>
+            </div>
+          </div>
+          <div class="whyhera-process-item">
+            <span>02</span>
+            <div>
+              <h3>tasarlıyoruz</h3>
+              <p>fikri bir arayüze dönüştürüyor, kullanıcı deneyimini ve görsel dili birlikte kurguluyoruz.</p>
+            </div>
+          </div>
+          <div class="whyhera-process-item">
+            <span>03</span>
+            <div>
+              <h3>geliştiriyoruz</h3>
+              <p>tasarımı gerçek bir web deneyimine dönüştürüyor, performans ve responsive yapısını optimize ediyoruz.</p>
+            </div>
+          </div>
+          <div class="whyhera-process-item">
+            <span>04</span>
+            <div>
+              <h3>geliştirmeye devam ediyoruz</h3>
+              <p>yayın sonrası geri bildirimleri değerlendiriyor ve projenin gelişimini birlikte sürdürüyoruz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="whyhera-final reveal">
+        <span>hera software</span>
+        <h2>aklınızdaki web sitesi <strong>burada başlar.</strong></h2>
+        <a href="#destek" class="primary-btn magnetic" data-modal="contact">projenizi konuşalım <span>↗</span></a>
+      </div>
+    </section>
+
+    <!-- TEKNOLOJİLER -->
+    <section class="internal-page" id="teknolojiler">
+      <div class="page-header reveal">
+        <span class="eyebrow">our stack</span>
+        <h1>teknolojiler<span>.</span></h1>
+        <p class="page-lead">fikirleri gerçeğe dönüştürmek için doğru teknolojileri kullanıyoruz.</p>
+      </div>
+
+      <div class="tech-intro reveal">
+        <span class="tech-intro-number">01</span>
+        <div>
+          <h2>sadece araçlar değil, <strong>çözümler.</strong></h2>
+          <p>her projenin ihtiyacı farklıdır. bu nedenle tek bir teknolojiye bağlı kalmak yerine projenin amacına, performans ihtiyaçlarına ve gelecekteki gelişimine uygun teknolojileri tercih ediyoruz.</p>
+        </div>
+      </div>
+
+      <div class="tech-grid">
+        <article class="tech-card reveal">
+          <div class="tech-card-top"><span>01</span><span>frontend</span></div>
+          <div class="tech-logo tech-js"><img src="assets/images/jslogo.png" alt="JS Logo"></div>
+          <div class="tech-card-content">
+            <h3>javascript</h3>
+            <p>etkileşimli, dinamik ve modern web deneyimleri için kullanıyoruz.</p>
+          </div>
+          <div class="tech-card-line"></div>
+        </article>
+
+        <article class="tech-card reveal">
+          <div class="tech-card-top"><span>02</span><span>backend</span></div>
+          <div class="tech-logo tech-php"><img src="assets/images/phplogo.png" alt="PHP Logo"></div>
+          <div class="tech-card-content">
+            <h3>php</h3>
+            <p>sunucu taraflı uygulamalar, api sistemleri ve dinamik web projeleri geliştiriyoruz.</p>
+          </div>
+          <div class="tech-card-line"></div>
+        </article>
+
+        <article class="tech-card reveal">
+          <div class="tech-card-top"><span>03</span><span>structure</span></div>
+          <div class="tech-logo tech-html"><img src="assets/images/htmllogo.webp" alt="HTML Logo"></div>
+          <div class="tech-card-content">
+            <h3>html</h3>
+            <p>semantik, erişilebilir ve sağlam web yapıları oluşturuyoruz.</p>
+          </div>
+          <div class="tech-card-line"></div>
+        </article>
+
+        <article class="tech-card reveal">
+          <div class="tech-card-top"><span>04</span><span>styling</span></div>
+          <div class="tech-logo tech-css"><img src="assets/images/csslogo.png" alt="CSS Logo"></div>
+          <div class="tech-card-content">
+            <h3>css</h3>
+            <p>responsive tasarımlar, animasyonlar ve detaylı kullanıcı deneyimleri geliştiriyoruz.</p>
+          </div>
+          <div class="tech-card-line"></div>
+        </article>
+
+        <article class="tech-card tech-rust-card reveal">
+          <div class="tech-card-top"><span>05</span><span>systems</span></div>
+          <div class="tech-logo tech-rust"><img src="assets/images/rust.jfif" alt="Rust Logo"></div>
+          <div class="tech-card-content">
+            <h3>rust</h3>
+            <p>performans, güvenlik ve sistem seviyesinde güçlü çözümler için kullanıyoruz.</p>
+          </div>
+          <div class="tech-card-line"></div>
+        </article>
+      </div>
+
+      <div class="tech-bottom reveal">
+        <div class="tech-bottom-label"><span>hera software</span><span>05 technologies</span></div>
+        <div class="tech-bottom-content">
+          <h2>doğru teknoloji. <strong>doğru deneyim.</strong></h2>
+          <p>teknolojiyi göstermek için değil, probleme en doğru çözümü üretmek için kullanıyoruz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAKETLER -->
+    <section class="internal-page" id="paketler">
+      <div class="page-header reveal">
+        <span class="eyebrow">çözüm ve paketler</span>
+        <h1>paketler<span>.</span></h1>
+        <p class="page-lead">ihtiyacınıza uygun hazır ve özel web çözümleri.</p>
+      </div>
+
+      <div class="whyhera-intro reveal">
+        <div class="whyhera-intro-number">01</div>
+        <div class="whyhera-intro-content">
+          <h2>şeffaf ve net <strong>fiyatlandırma.</strong></h2>
+          <p>başlangıç ve kurumsal paketlerimizde sadece tasarım ve yazılım hizmeti verilir, hosting/domain müşteriye aittir.</p>
+          <p>gelişmiş ve özel projelerimizde ise 1 yıllık yüksek hızlı sunucu, altyapı ve .com domain maliyetleri paket fiyatına dahildir.</p>
+        </div>
+      </div>
+
+      <div class="packages-grid">
+        <!-- PAKET 1 -->
+        <article class="package-card reveal">
+          <div class="package-card-top">
+            <span class="tag">01 / başlangıç</span>
+            <span class="badge off">HeraSoft</span>
+          </div>
+          <div class="package-header">
+            <h3>Landing & Vitrin Sayfası</h3>
+            <p>Kişisel portfolyolar, tek sayfa tanıtımlar ve hızlı dijital kartvizitler için.</p>
+          </div>
+          <div class="package-price-box">
+            <div class="price-main">
+              ₺12.500 <small>/ proje başı</small> <br>
+              +₺5.000 <small>/domain & hosting</small>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li>✦ 1 Sayfa Modern & Responsive Tasarım</li>
+            <li>✦ Müşteri Domain & Hostingine Kurulum</li>
+            <li>✦ Ücretsiz SSL Sertifikası & Temel SEO</li>
+            <li>✦ WhatsApp & İletişim Butonları Entegrasyonu</li>
+            <li>✦ Mobil & Tablet Uyumlu Arayüz</li>
+            <li>✦ 1 Hafta İçerisinde Teslim</li>
+          </ul>
+          <button class="primary-btn magnetic" data-modal="contact">bu paketi seç <span>↗</span></button>
+        </article>
+
+        <!-- PAKET 2 -->
+        <article class="package-card reveal featured">
+          <div class="package-card-top">
+            <span class="tag">02 / popüler</span>
+            <span class="badge off">HeraSoft</span>
+          </div>
+          <div class="package-header">
+            <h3>Kurumsal Web Sitesi</h3>
+            <p>Küçük ve orta ölçekli firmalar, dernekler ve stüdyolar için ideal çok sayfalı çözüm.</p>
+          </div>
+          <div class="package-price-box">
+            <div class="price-main">
+              ₺35.000 <small>/ proje başı</small><br>
+              +₺5.000 <small>/domain & hosting</small>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li>✦ 5 Sayfaya Kadar Özel Tasarım (Hakkımızda, Hizmetler vb.)</li>
+            <li>✦ Müşteri Sunucusuna / Hostingine Kurulum</li>
+            <li>✦ Dinamik Yönetim Paneli (PHP / Custom)</li>
+            <li>✦ Detaylı SEO Optimizasyonu & Performans</li>
+            <li>✦ İletişim Formu & Google Harita Kaydı</li>
+            <li>✦ 1 Ay Ücretsiz Teknik Destek</li>
+          </ul>
+          <button class="primary-btn magnetic" data-modal="contact">bu paketi seç <span>↗</span></button>
+        </article>
+
+        <!-- PAKET 3 -->
+        <article class="package-card reveal">
+          <div class="package-card-top">
+            <span class="tag">03 / gelişmiş</span>
+            <span class="badge off">HeraSoft</span>
+          </div>
+          <div class="package-header">
+            <h3>Katalog & E-Ticaret Lite</h3>
+            <p>Ürünlerini sergilemek, katalog oluşturmak ve WhatsApp / online sipariş almak isteyenler için.</p>
+          </div>
+          <div class="package-price-box">
+            <div class="price-main">
+              ₺55.000 <small>/ proje başı</small><br>
+              +₺5.000 <small>/domain & hosting</small>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li>✦ Sınırsız Kategori & Ürün Kataloğu Ekleme</li>
+            <li>✦ Online Sipariş / WhatsApp Sipariş Altyapısı</li>
+            <li>✦ 1 Yıllık .com Domain + Pro NVMe Hosting Dahil</li>
+            <li>✦ Gelişmiş Arama & Filtreleme Sistemleri</li>
+            <li>✦ Detaylı SEO & Sosyal Medya Paylaşım Yapısı</li>
+            <li>✦ 3 Ay Ücretsiz Bakım & Destek</li>
+          </ul>
+          <button class="primary-btn magnetic" data-modal="contact">bu paketi seç <span>↗</span></button>
+        </article>
+
+        <!-- PAKET 4 -->
+        <article class="package-card reveal">
+          <div class="package-card-top">
+            <span class="tag">04 / özel</span>
+            <span class="badge off">HeraSoft</span>
+          </div>
+          <div class="package-header">
+            <h3>Özel Yazılım & Web App</h3>
+            <p>Karmaşık iş mantığı, özel veritabanı mimarisi ve yüksek performanslı projeler için.</p>
+          </div>
+          <div class="package-price-box">
+            <div class="price-main">
+              ₺100.000 <br>
+              <small>'den başlayan fiyatlarla</small><br>
+              +₺5.000 <small>/domain & hosting</small><br><br>
+              <small>proje kapsamı, modül sayısı ve entegrasyonlara gore fiyatlandırılır.</small>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li>✦ %100 Sıfırdan Özel Tasarım & Backend (PHP / Rust / JS)</li>
+            <li>✦ 1 Yıllık Yüksek Performanslı Cloud VPS Server + Domain Dahil</li>
+            <li>✦ Özel Yönetim Paneli & API Entegrasyonları</li>
+            <li>✦ Yüksek Güvenlik, Veritabanı Optimizasyonu & CDN</li>
+            <li>✦ Marka Görsel Seti (Logo & Sosyal Medya Hazırlığı)</li>
+            <li>✦ 6 Ay Ücretsiz Destek & Bakım Garantisi</li>
+          </ul>
+          <button class="primary-btn magnetic" data-modal="contact">bu paketi seç <span>↗</span></button>
+        </article>
+      </div>
+
+      <div class="whyhera-statement reveal" style="margin-top: 50px;">
+        <div class="whyhera-statement-label">bilgilendirme</div>
+        <div class="whyhera-statement-text">
+          <span>not</span>
+          <strong>ihtiyacınıza göre özel paketler ve ek modüller oluşturulabilir.</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKET -->
+    <section class="internal-page" id="market">
+      <div class="page-header reveal">
+        <span class="eyebrow">hera software / market</span>
+        <h1>market<span>.</span></h1>
+        <p class="page-lead">dijital üretim sürecin için tasarlanmış ürünler.</p>
+      </div>
+      <div class="market-note reveal">
+        <span class="market-note-icon">✦</span>
+        <div>
+          <strong>dijital ürün vitrini</strong>
+          <p>şimdilik örnek statik ürünler gösterilmektedir. ürün ve fiyat bilgileri daha sonra veritabanına bağlanabilir.</p>
+        </div>
+      </div>
+      <div class="market-grid">
+        <article class="market-product product-card tilt-card" data-title="studio interface kit" data-category="ui ux figma">
+          <div class="market-art market-art-interface">
+            <span>HERA / UI-01</span>
+            <strong>FORM<br>FOLLOWS<br>FEELING<span>.</span></strong>
+            <i>80+ COMPONENTS</i>
+          </div>
+          <div class="market-product-info">
+            <div>
+              <span class="tag">ui / ux</span>
+              <h3>studio interface kit</h3>
+              <p>figma için arayüz bileşenleri ve responsive tasarım seti.</p>
+            </div>
+            <strong class="market-price">₺2.400</strong>
+          </div>
+          <button class="primary-btn add-to-cart" data-add-cart="interface-kit">sepete ekle <span>＋</span></button>
+        </article>
+
+        <article class="market-product product-card tilt-card" data-title="editorial poster pack" data-category="graphic tasarım">
+          <div class="market-art market-art-poster">
+            <span>HERA / 026</span>
+            <strong>STAY<br>CURIOUS<span>.</span></strong>
+            <i>POSTER COLLECTION</i>
+          </div>
+          <div class="market-product-info">
+            <div>
+              <span class="tag">graphic</span>
+              <h3>editorial poster pack</h3>
+              <p>12 farklı poster konseptinden oluşan dijital tasarım paketi.</p>
+            </div>
+            <strong class="market-price">₺950</strong>
+          </div>
+          <button class="primary-btn add-to-cart" data-add-cart="poster-pack">sepete ekle <span>＋</span></button>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEPETİM -->
     <section class="internal-page" id="sepetim">
-      <div class="page-header reveal"><span class="eyebrow">hera software / market</span><h1>sepetim<span>.</span></h1><p class="page-lead">seçtiğin dijital ürünleri buradan yönetebilirsin.</p></div>
-      <div class="cart-layout"><div class="cart-items-wrap"><div class="cart-heading"><h2>sepetindeki ürünler</h2><span id="cart-item-count">0 ürün</span></div><div id="cart-items" class="cart-items" aria-live="polite"><div class="cart-empty"><span>◇</span><h3>sepetin şimdilik boş</h3><p>market sayfasından ilgini çeken ürünleri sepetine ekleyebilirsin.</p><a href="#market" class="page-link" data-page="market">markete dön ↗</a></div></div></div><aside class="cart-summary"><span class="eyebrow">sipariş özeti</span><div class="cart-summary-line"><span>ürün toplamı</span><strong id="cart-subtotal">₺0</strong></div><div class="cart-summary-line"><span>indirim</span><strong>₺0</strong></div><div class="cart-summary-total"><span>genel toplam</span><strong id="cart-total">₺0</strong></div><button class="primary-btn" id="checkout-button" type="button">sipariş talebi oluştur <span>↗</span></button><p>ödeme altyapısı henüz bağlı değildir. sipariş talebi statik olarak hazırlanır.</p></aside></div>
+      <div class="page-header reveal">
+        <span class="eyebrow">hera software / market</span>
+        <h1>sepetim<span>.</span></h1>
+        <p class="page-lead">seçtiğin dijital ürünleri buradan yönetebilirsin.</p>
+      </div>
+      <div class="cart-layout">
+        <div class="cart-items-wrap">
+          <div class="cart-heading">
+            <h2>sepetindeki ürünler</h2>
+            <span id="cart-item-count">0 ürün</span>
+          </div>
+          <div id="cart-items" class="cart-items" aria-live="polite">
+            <div class="cart-empty">
+              <span>◇</span>
+              <h3>sepetin şimdilik boş</h3>
+              <p>market sayfasından ilgini çeken ürünleri sepetine ekleyebilirsin.</p>
+              <a href="#market" class="page-link" data-page="market">markete dön ↗</a>
+            </div>
+          </div>
+        </div>
+        <aside class="cart-summary">
+          <span class="eyebrow">sipariş özeti</span>
+          <div class="cart-summary-line"><span>ürün toplamı</span><strong id="cart-subtotal">₺0</strong></div>
+          <div class="cart-summary-line"><span>indirim</span><strong>₺0</strong></div>
+          <div class="cart-summary-total"><span>genel toplam</span><strong id="cart-total">₺0</strong></div>
+          <button class="primary-btn" id="checkout-button" type="button">sipariş talebi oluştur <span>↗</span></button>
+          <p>ödeme altyapısı henüz bağlı değildir. sipariş talebi statik olarak hazırlanır.</p>
+        </aside>
+      </div>
     </section>
 
     <footer>
-      <div class="footer-brand"><strong style="text-transform: lowercase;">herasoftware<span>.</span>org</strong><p>aklındaki web sitesi.</p></div>
-      <div class="footer-links"><a href="#">instagram</a><a href="#">discord</a><a href="#">github</a><a href="#">mail</a></div>
+      <div class="footer-brand">
+        <strong style="text-transform: lowercase;">herasoftware<span>.</span>org</strong>
+        <p>aklındaki web sitesi.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://instagram.com" target="_blank">instagram</a>
+        <a href="https://discord.com" target="_blank">discord</a>
+        <a href="https://github.com" target="_blank">github</a>
+        <a href="mailto:info@herasoftware.org">mail</a>
+      </div>
       <span class="footer-copy">made with obsession / 2026</span>
     </footer>
   </main>
 
+  <!-- İLETİŞİM MODAL -->
   <div class="modal" id="contactModal">
     <div class="modal-backdrop"></div>
     <div class="contact-modal">
@@ -1422,6 +830,70 @@
         <button class="primary-btn">mail ile gönder <span>↗</span></button>
       </div>
       <div class="modal-note">backend bağlandığında bu form doğrudan destek sistemine aktarılabilir.</div>
+    </div>
+  </div>
+
+  <!-- GİRİŞ & KAYIT MODAL (AUTH MODAL) -->
+  <div class="modal" id="authModal">
+    <div class="modal-backdrop"></div>
+    <div class="auth-modal-card">
+      <button class="modal-close">×</button>
+      
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" data-auth-tab="login">Giriş Yap</button>
+        <button class="auth-tab-btn" data-auth-tab="register">Kayıt Ol</button>
+      </div>
+
+      <!-- Giriş Yap Paneli -->
+      <div class="auth-panel active" id="auth-login-panel">
+        <div class="auth-header">
+          <h3>Hera Software'e Giriş Yap</h3>
+          <p>Hesabına erişmek için giriş seçeneğini belirle.</p>
+        </div>
+
+        <div class="auth-social-list">
+          <!-- RAHUIS ILE GIRIS YAP (DISABLED) -->
+          <button class="auth-btn rahuis-btn" disabled>
+            <span class="auth-btn-icon">🔒</span>
+            <span>Rahuis ile giriş yap</span>
+            <span class="disabled-badge">Yakında</span>
+          </button>
+
+          <button class="auth-btn google-btn">
+            <svg viewBox="0 0 24 24" class="social-icon"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.1 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 10.8 0 12.5s.7 2.8 1.9 5.2l3.7-2.9z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.1-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z"/></svg>
+            <span>Google ile giriş yap</span>
+          </button>
+
+          <button class="auth-btn discord-btn">
+            <svg viewBox="0 0 24 24" class="social-icon" fill="#5865F2"><path d="M20.3 4.4A19.7 19.7 0 0 0 15.1 2.8a.1.1 0 0 0-.1.1c-.2.4-.4.9-.6 1.3a18.2 18.2 0 0 0-4.8 0 12.6 12.6 0 0 0-.6-1.3.1.1 0 0 0-.1-.1 19.7 19.7 0 0 0-5.2 1.6.1.1 0 0 0-.1 0A19.8 19.8 0 0 0 .3 17.7a.1.1 0 0 0 0 .1 19.8 19.8 0 0 0 6 3a.1.1 0 0 0 .1 0c.5-.7.9-1.4 1.3-2.1a.1.1 0 0 0-.1-.1 13 13 0 0 1-1.9-.9.1.1 0 0 1 0-.2c.1-.1.3-.2.4-.3a.1.1 0 0 1 .1 0 14.1 14.1 0 0 0 11.6 0 .1.1 0 0 1 .1 0c.1.1.3.2.4.3a.1.1 0 0 1 0 .2c-.6.3-1.2.6-1.9.9a.1.1 0 0 0 0 .1c.4.7.8 1.4 1.3 2.1a.1.1 0 0 0 .1 0 19.8 19.8 0 0 0 6-3 .1.1 0 0 0 0-.1 19.6 19.6 0 0 0-3.3-13.3.1.1 0 0 0 0 0zM8.5 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4zm7 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4z"/></svg>
+            <span>Discord ile giriş yap</span>
+          </button>
+        </div>
+
+        <div class="auth-divider"><span>veya e-posta ile</span></div>
+
+        <div class="fake-form">
+          <input type="email" placeholder="E-posta adresin">
+          <input type="password" placeholder="Şifren">
+          <button class="primary-btn w-full">Giriş Yap <span>↗</span></button>
+        </div>
+      </div>
+
+      <!-- Kayıt Ol Paneli -->
+      <div class="auth-panel" id="auth-register-panel">
+        <div class="auth-header">
+          <h3>Yeni Hesap Oluştur</h3>
+          <p>Hera Software ekosistemine katıl.</p>
+        </div>
+
+        <div class="fake-form">
+          <input type="text" placeholder="Ad Soyad / Kullanıcı Adı">
+          <input type="email" placeholder="E-posta Adresin">
+          <input type="password" placeholder="Şifre Oluştur">
+          <button class="primary-btn w-full">Kayıt Ol <span>↗</span></button>
+        </div>
+      </div>
+
     </div>
   </div>
 
