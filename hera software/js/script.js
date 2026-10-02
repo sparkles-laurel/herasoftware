@@ -5,15 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const body = document.body;
 
-    /* PAGE LOADER */
+    /* PAGE LOADER - Hızlı & Güvenli Yapı */
     const loader = $(".page-loader");
     if (loader) {
-        window.addEventListener("load", () => {
+        const hideLoader = () => {
+            if (loader.classList.contains("done")) return;
+            loader.classList.add("done");
             setTimeout(() => {
-                loader.classList.add("done");
-                setTimeout(() => loader.remove(), 800);
-            }, 600);
-        });
+                if (loader.parentNode) loader.remove();
+            }, 800);
+        };
+
+        // Sayfa zaten yüklendiyse hemen kapat
+        if (document.readyState === "complete") {
+            setTimeout(hideLoader, 300);
+        } else {
+            window.addEventListener("load", hideLoader);
+            // Her ihtimale karşı (resim takılması vs.) maksimum 1.8sn sonra zorla kapat
+            setTimeout(hideLoader, 1800);
+        }
     }
 
     /* CURSOR GLOW */
@@ -39,19 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
     animateCursor();
 
     /* MODAL HANDLING (CONTACT & AUTH) */
-    const modals = $$(".modal");          function openModal(modalEl) {         if (!modalEl) return;         modalEl.classList.add("open");         body.style.overflow = "hidden";     }      function closeModal(modalEl) {         if (!modalEl) return;         modalEl.classList.remove("open");         body.style.overflow = "";     }      // Modal Triggers     $$("[data-modal]").forEach((btn) => {
+    const modals = $$(".modal");          function openModal(modalEl) {         if (!modalEl) return;         modalEl.classList.add("open");         body.style.overflow = "hidden";     }      function closeModal(modalEl) {         if (!modalEl) return;         modalEl.classList.remove("open");         body.style.overflow = "";     }      // Modal Tetikleyicileri     $$("[data-modal]").forEach((btn) => {
         btn.addEventListener("click", () => {
             const modalType = btn.dataset.modal;
             if (modalType === "contact") {
                 openModal($("#contactModal"));
             } else if (modalType === "auth") {
-                const authModal = $("#authModal");                 const initialTab = btn.dataset.tab \vert{}\vert{} "login";                 switchAuthTab(initialTab);                 openModal(authModal);             }         });     });      // Close buttons & Backdrop     $$(".modal-close, .modal-backdrop").forEach((el) => {
+                const authModal = $("#authModal");                 const initialTab = btn.dataset.tab \vert{}\vert{} "login";                 switchAuthTab(initialTab);                 openModal(authModal);             }         });     });      // Kapatma Butonları & Backdrop     $$(".modal-close, .modal-backdrop").forEach((el) => {
         el.addEventListener("click", () => {
             modals.forEach(closeModal);
         });
     });
 
-    // Auth Modal Tab Switcher
+    // Auth Modal Sekme Değiştirici
     function switchAuthTab(tabName) {
         const tabs = $$(".auth-tab-btn");         const panels = $$(".auth-panel");
 
@@ -64,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    $$(".auth-tab-btn").forEach((btn) => {         btn.addEventListener("click", () => {             switchAuthTab(btn.dataset.authTab);         });     });      /* ESC KEY CLOSE */     document.addEventListener("keydown", (e) => {         if (e.key === "Escape") modals.forEach(closeModal);     });      /* COUNTERS */     const counters = $$
+    $$(".auth-tab-btn").forEach((btn) => {         btn.addEventListener("click", () => {             switchAuthTab(btn.dataset.authTab);         });     });      /* ESC TUŞU İLE KAPATMA */     document.addEventListener("keydown", (e) => {         if (e.key === "Escape") modals.forEach(closeModal);     });      /* SAYAÇ ANIMASYONU */     const counters = $$
 (".hero-stats strong");
     let countersStarted = false;
 
@@ -84,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(update);
     }
 
-    const stats = $(".hero-stats");     if (stats) {         const observer = new IntersectionObserver((entries) => {             if (entries[0].isIntersecting && !countersStarted) {                 countersStarted = true;                 counters.forEach(animateCounter);             }         }, { threshold: 0.5 });         observer.observe(stats);     }      /* SPA NAV SYSTEM */     const pageLinks = $$(".page-link");
+    const stats = $(".hero-stats");     if (stats) {         const observer = new IntersectionObserver((entries) => {             if (entries[0].isIntersecting && !countersStarted) {                 countersStarted = true;                 counters.forEach(animateCounter);             }         }, { threshold: 0.5 });         observer.observe(stats);     }      /* SPA YÖNLENDİRME SİSTEMİ */     const pageLinks = $$(".page-link");
     const internalPages = $$(".internal-page");     const homeContent = $$("main > .hero, main > .ticker, main > .section, main > .cta-section");
 
     function showPage(pageName) {
