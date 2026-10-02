@@ -25,12 +25,17 @@
   <div class="page-loader"><div class="loader-logo"><p align="center"><img src="assets/logo/logobg.png" style="width: 50%;"></p><span></span></div><div class="loader-line"><i></i></div></div>
 
   <header class="topbar">
-    <button class="mobile-menu" aria-label="menüyü aç"><span></span><span></span></button>
-    <a class="brand" href="#"><span style="text-transform: lowercase;">herasoftware<span class="pink">.</span>org</span></a>
+    <button class="mobile-menu" aria-label="menüyü aç" aria-expanded="false"><span></span><span></span></button>
+    <a class="brand" href="#vitrin" data-target=""><img src="assets/logo/logobg.png" alt="Hera Software"><span class="brand-caption">daha iyi bir dijital gelecek için</span></a>
+    <nav class="top-nav" aria-label="ana gezinme">
+      <a href="#vitrin" data-target="">anasayfa</a>
+      <a href="#hakkimizda" class="page-link" data-page="hakkimizda">hakkımızda</a>
+      <a href="#market" class="page-link" data-page="market">market</a>
+      <a href="#web" class="page-link" data-page="web">projeler</a>
+      <a href="#paketler" class="page-link" data-page="paketler">paketler</a>
+    </nav>
+    <div class="top-actions"><a class="cart-shortcut page-link" href="#sepetim" data-page="sepetim" aria-label="sepetim">sepetim <span class="cart-count" data-cart-count>0</span></a></div>
     <div class="top-search"><span>⌕</span><input id="search" placeholder="ürün, kategori veya etiket ara..."><kbd>⌘ K</kbd></div>
-    <div class="top-actions">
-      <h4></h4>
-    </div>
   </header>
 
   <aside class="sidebar" id="sidebar">
@@ -100,16 +105,99 @@
 
     <section class="ticker"><div><span>web</span> — <span>design</span> — <span>branding</span> — <span>ui/ux</span> — <span>creative</span> — <span>web</span> — <span>design</span> — <span>branding</span> — <span>ui/ux</span> —</div></section>
 
-   
+    <section class="section reveal" id="web-preview">
+      <div class="section-head">
+          <div>
+          <span class="section-number">01</span>
+          <h2>Yaptığımız İşler</h2>
+          </div>
+
+          <a class="view-all page-link" href="#web" data-page="web">
+            <span>Tümünü Gör <span>↗</span></span>
+          </a>
+      </div>
+
+      <div class="product-grid">
+
+          <article class="product-card tilt-card"
+          data-category="web"
+          data-title="noir portfolio">
+
+          <div class="product-image">
+            <a target="_blank" href="https://studioalsancak.com">
+              <img
+              src="/assets/images/stdalsancak.png" style="width: 100%;">
+
+              <div class="product-hover">
+                incele <span>↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-meta">
+              <div>
+              <span class="tag">web</span>
+              <h3>Studio Alsancak Web Sitesi</h3>
+              <p>Bir kayıt & kurgu stüdyo sitesi</p>
+              </div>
+          </div>
+
+          </article>
 
 
+          <article class="product-card tilt-card"
+          data-category="web"
+          data-title="orbit dashboard">
+
+          <div class="product-image">
+            <a target="_blank" href="https://katassen.org">
+              <img
+              src="/assets/images/katassen.png" style="width: 100%;">
+
+              <div class="product-hover">
+                incele <span>↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-meta">
+              <div>
+              <span class="tag">web</span>
+              <h3>Karayolları Taşıma İşçileri Sendikası Web Sitesi</h3>
+              <p>Sendika sitesi</p>
+              </div>
+          </div>
+
+          </article>
 
 
+          <article class="product-card tilt-card"
+          data-category="web"
+          data-title="motion agency">
 
+          <div class="product-image">
+            <a target="_blank" href="https://misafirkitabevi.com">
+              <img
+              src="/assets/images/misafirkitabevi.png" style="width: 100%;">
 
+              <div class="product-hover">
+                incele <span>↗</span>
+              </div>
+            </a>
+          </div>
 
+          <div class="product-meta">
+              <div>
+              <span class="tag">web</span>
+              <h3>Misafir kitabevi web sitesi</h3>
+              <p>Kitap satış sitesi</p>
+              </div>
+          </div>
 
+          </article>
 
+      </div>
+    </section>
 <!--
     <section class="section reveal" id="tasarim">
       <div class="section-head"><div><span class="section-number">02</span><h2>tasarım vitrini</h2></div><a href="#" class="view-all">tümünü gör <span>↗</span></a></div>
@@ -135,6 +223,18 @@
       </div>
     </section>
 -->
+    <section class="cta-section reveal" id="destek">
+      <div class="cta-lines"></div>
+      <span class="section-number">02</span>
+      <h2>sende böyle site istiyosan<br><span>gel yapalım</span></h2>
+      <p>hazır bir ürün seç veya sıfırdan bir şey tasarlayalım.</p>
+      <button class="primary-btn magnetic" data-modal="contact">projen için konuşalım <span>↗</span></button>
+    </section>
+
+
+
+
+
 
 
 
@@ -163,35 +263,6 @@
 
         <div class="product-grid">
 
-
-        <article class="product-card tilt-card"
-          data-category="web"
-          data-title="noir portfolio">
-
-          <div class="product-image">
-            <a target="_blank" href="https://fling.com.tr/">
-              <img
-              src="https://pbs.twimg.com/card_img/2105400624493838336/Ubx8EFyT?format=png&name=small" style="width: 100%;">
-
-              <div class="product-hover">
-                incele <span>↗</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="product-meta">
-              <div>
-              <span class="tag">web</span>
-              <h3>Fling App</h3>
-              <p>Topluluk, Sunucu ve arkadaş ilişkileri kurmak için yaratılmış bir platform.</p>
-              </div>
-          </div>
-
-          </article>
-
-          
-
-          
             <article class="product-card tilt-card"
                 data-category="web"
                 data-title="studio alsancak">
@@ -478,7 +549,7 @@
           <article class="team-card tilt-card">
 
               <div class="team-image">
-                  <img src="https://i.pinimg.com/originals/8c/8c/a9/8c8ca966dab8d95d560e457513beb0e8.jpg?nii=t" alt="ekip üyesi">
+                  <img src="assets/images/görsel_2026-09-16_223634191.png" alt="ekip üyesi">
               </div>
 
               <div class="team-info">
@@ -489,13 +560,19 @@
                       </span>
 
                       <h3>
-                          galanthus
+                          kawaiidut
                       </h3>
 
                       <p>
                           web developer / designer
                       </p>
                       <br>
+                      <div class="pp-links">
+                        <a class="pplink instalink" target="_blank" href="https://www.instagram.com/kawaiidut/">Instagram↗</a>
+                        <a class="pplink xitterlink" target="_blank" href="https://x.com/kawaiidut">Xitter↗</a>
+                        <a class="pplink youtubelink" target="_blank" href="https://www.youtube.com/@kawaiidut">Youtube↗</a>
+                        <a class="pplink xitterlink" target="_blank" href="https://github.com/kawaiidut">Github↗</a>
+                      </div>
                   </div>
 
                   <span class="team-number">
@@ -538,47 +615,6 @@
                   </div>
 
                   <span class="team-number">
-                      02
-                  </span>
-
-              </div>
-
-          </article>
-
-
-
-
-
-        <article class="team-card tilt-card">
-
-              <div class="team-image">
-                  <img src="assets/images/düt.png" alt="ekip üyesi">
-              </div>
-
-              <div class="team-info">
-
-                  <div>
-                      <span class="tag">
-                          founder
-                      </span>
-
-                      <h3>
-                          kawaiidut
-                      </h3>
-
-                      <p>
-                          web developer / designer
-                      </p>
-                      <br>
-                      <div class="pp-links">
-                        <a class="pplink instalink" target="_blank" href="https://www.instagram.com/kawaiidut/">Instagram↗</a>
-                        <a class="pplink xitterlink" target="_blank" href="https://x.com/kawaiidut">Xitter↗</a>
-                        <a class="pplink youtubelink" target="_blank" href="https://www.youtube.com/@kawaiidut">Youtube↗</a>
-                        <a class="pplink xitterlink" target="_blank" href="https://github.com/kawaiidut">Github↗</a>
-                      </div>
-                  </div>
-
-                  <span class="team-number">
                       03
                   </span>
 
@@ -586,8 +622,6 @@
 
           </article>
 
-
-        
 
           <article class="team-card tilt-card">
 
@@ -626,51 +660,6 @@
 
           </article>
 
-
-
-
-
-
-        <article class="team-card tilt-card">
-
-              <div class="team-image">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrm4Rf_XehkvhBL1o3V6SEJmbsQNSsjIgSjrNw5ljvMFkh4A_P9beNt9cBz7DOgjBZkFToY1CSjWNyzDtWwtDgbHXOA0ElMP5kZFXT_PM&s=10" alt="ekip üyesi">
-              </div>
-
-              <div class="team-info">
-
-                  <div>
-                      <span class="tag">
-                          back & front developer
-                      </span>
-
-                      <h3>
-                          alwiss
-                      </h3>
-
-                      <p>
-                          web master
-                      </p>
-                      <br>
-                  </div>
-
-                  <span class="team-number">
-                      05
-                  </span>
-
-              </div>
-
-          </article>
-
-
-
-
-        
-
-
-
-        
-        
       </div>
 
     </section>
@@ -1396,9 +1385,25 @@
     </section>
 
     
+    <!-- market -->
+    <section class="internal-page" id="market">
+      <div class="page-header reveal"><span class="eyebrow">hera software / market</span><h1>market<span>.</span></h1><p class="page-lead">dijital üretim sürecin için tasarlanmış ürünler.</p></div>
+      <div class="market-note reveal"><span class="market-note-icon">✦</span><div><strong>dijital ürün vitrini</strong><p>şimdilik örnek statik ürünler gösterilmektedir. ürün ve fiyat bilgileri daha sonra veritabanına bağlanabilir.</p></div></div>
+      <div class="market-grid">
+        <article class="market-product product-card tilt-card" data-title="studio interface kit" data-category="ui ux figma"><div class="market-art market-art-interface"><span>HERA / UI-01</span><strong>FORM<br>FOLLOWS<br>FEELING<span>.</span></strong><i>80+ COMPONENTS</i></div><div class="market-product-info"><div><span class="tag">ui / ux</span><h3>studio interface kit</h3><p>figma için arayüz bileşenleri ve responsive tasarım seti.</p></div><strong class="market-price">₺2.400</strong></div><button class="primary-btn add-to-cart" data-add-cart="interface-kit">sepete ekle <span>＋</span></button></article>
+        <article class="market-product product-card tilt-card" data-title="editorial poster pack" data-category="graphic tasarım"><div class="market-art market-art-poster"><span>HERA / 026</span><strong>STAY<br>CURIOUS<span>.</span></strong><i>POSTER COLLECTION</i></div><div class="market-product-info"><div><span class="tag">graphic</span><h3>editorial poster pack</h3><p>12 farklı poster konseptinden oluşan dijital tasarım paketi.</p></div><strong class="market-price">₺950</strong></div><button class="primary-btn add-to-cart" data-add-cart="poster-pack">sepete ekle <span>＋</span></button></article>
+      </div>
+    </section>
+
+    <!-- sepetim -->
+    <section class="internal-page" id="sepetim">
+      <div class="page-header reveal"><span class="eyebrow">hera software / market</span><h1>sepetim<span>.</span></h1><p class="page-lead">seçtiğin dijital ürünleri buradan yönetebilirsin.</p></div>
+      <div class="cart-layout"><div class="cart-items-wrap"><div class="cart-heading"><h2>sepetindeki ürünler</h2><span id="cart-item-count">0 ürün</span></div><div id="cart-items" class="cart-items" aria-live="polite"><div class="cart-empty"><span>◇</span><h3>sepetin şimdilik boş</h3><p>market sayfasından ilgini çeken ürünleri sepetine ekleyebilirsin.</p><a href="#market" class="page-link" data-page="market">markete dön ↗</a></div></div></div><aside class="cart-summary"><span class="eyebrow">sipariş özeti</span><div class="cart-summary-line"><span>ürün toplamı</span><strong id="cart-subtotal">₺0</strong></div><div class="cart-summary-line"><span>indirim</span><strong>₺0</strong></div><div class="cart-summary-total"><span>genel toplam</span><strong id="cart-total">₺0</strong></div><button class="primary-btn" id="checkout-button" type="button">sipariş talebi oluştur <span>↗</span></button><p>ödeme altyapısı henüz bağlı değildir. sipariş talebi statik olarak hazırlanır.</p></aside></div>
+    </section>
+
     <footer>
       <div class="footer-brand"><strong style="text-transform: lowercase;">herasoftware<span>.</span>org</strong><p>aklındaki web sitesi.</p></div>
-      <div class="footer-links"><a href="https://www.instagram.com/herasoftwareorg/">instagram</a><a href="https://fling.com.tr/invite/herasoftware">Fling</a><!--<a href="#">Discord</a> <a href="#"></a>--> <a href="https://www.youtube.com/@herasoftwareorg">youtube</a></div>
+      <div class="footer-links"><a href="#">instagram</a><a href="#">discord</a><a href="#">github</a><a href="#">mail</a></div>
       <span class="footer-copy">made with obsession / 2026</span>
     </footer>
   </main>
