@@ -1334,3 +1334,51 @@ if (initialPage) {
     }, 50);
 
 }
+
+
+/* =========================================================
+   STATIC MARKET CART (database-ready, no backend requests)
+========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const catalog = {
+    "interface-kit": { id:"interface-kit", name:"studio interface kit", price:2400, type:"ui / ux", symbol:"UI" },
+    "poster-pack": { id:"poster-pack", name:"editorial poster pack", price:950, type:"graphic", symbol:"✳" }
+  };
+  const storageKey = "hera_static_cart_v1";
+  let cart = [];
+  try { cart = JSON.parse(localStorage.getItem(storageKey) || "[]"); if (!Array.isArray(cart)) cart=[]; } catch (_) { cart=[]; }
+  const money = value => new Intl.NumberFormat("tr-TR", {style:"currency",currency:"TRY",maximumFractionDigits:0}).format(value);
+  const persist = () => { try { localStorage.setItem(storageKey, JSON.stringify(cart)); } catch (_) {} };
+  const countNodes = document.querySelectorAll("[data-cart-count]");
+  const itemHost = document.getElementById("cart-items");
+  const countHost = document.getElementById("cart-item-count");
+  const subtotalHost = document.getElementById("cart-subtotal");
+  const totalHost = document.getElementById("cart-total");
+  function renderCart() {
+    const count = cart.reduce((sum,item)=>sum+item.qty,0);
+    const total = cart.reduce((sum,item)=>sum+(catalog[item.id]?.price||0)*item.qty,0);
+    countNodes.forEach(node=>node.textContent=count);
+    if (countHost) countHost.textContent=`${count} ürün`;
+    if (subtotalHost) subtotalHost.textContent=money(total);
+    if (totalHost) totalHost.textContent=money(total);
+    if (!itemHost) return;
+    itemHost.replaceChildren();
+    if (!cart.length) {
+      const empty=document.createElement("div"); empty.className="cart-empty";
+      empty.innerHTML='<span>◇</span><h3>sepetin şimdilik boş</h3><p>market sayfasından ilgini çeken ürünleri sepetine ekleyebilirsin.</p><a href="#market" class="page-link" data-page="market">markete dön ↗</a>';
+      itemHost.appendChild(empty);
+      empty.querySelector("a").addEventListener("click",event=>{event.preventDefault();history.pushState({page:"market"},"","#market");if(typeof showPage==="function")showPage("market");});
+      return;
+    }
+    cart.forEach(item=>{ const product=catalog[item.id]; if(!product)return; const row=document.createElement("article"); row.className="cart-row";
+      const thumb=document.createElement("div");thumb.className="cart-thumb";thumb.textContent=product.symbol;
+      const info=document.createElement("div");const title=document.createElement("h3");title.textContent=product.name;const desc=document.createElement("p");desc.textContent=`${product.type} · adet: ${item.qty}`;info.append(title,desc);
+      const price=document.createElement("div");price.className="cart-row-price";const amount=document.createElement("strong");amount.textContent=money(product.price*item.qty);const remove=document.createElement("button");remove.className="remove-cart-item";remove.type="button";remove.textContent="ürünü çıkar";remove.addEventListener("click",()=>{cart=cart.filter(entry=>entry.id!==item.id);persist();renderCart();});price.append(amount,remove);row.append(thumb,info,price);itemHost.appendChild(row);
+    });
+  }
+  document.querySelectorAll("[data-add-cart]").forEach(button=>button.addEventListener("click",()=>{const id=button.dataset.addCart;if(!catalog[id])return;const existing=cart.find(item=>item.id===id);if(existing)existing.qty+=1;else cart.push({id,qty:1});persist();renderCart();const original=button.innerHTML;button.innerHTML='sepete eklendi <span>✓</span>';setTimeout(()=>button.innerHTML=original,1200);}));
+  document.getElementById("checkout-button")?.addEventListener("click",()=>{if(!cart.length){document.querySelector("#toast span")?.replaceChildren(document.createTextNode("önce marketten ürün eklemelisin"));document.getElementById("toast")?.classList.add("show");setTimeout(()=>document.getElementById("toast")?.classList.remove("show"),2600);return;}const lines=cart.map(item=>`${catalog[item.id].name} x ${item.qty} — ${money(catalog[item.id].price*item.qty)}`).join("\n");const total=cart.reduce((sum,item)=>sum+catalog[item.id].price*item.qty,0);const message=`Hera Software sipariş talebi\n${lines}\nToplam: ${money(total)}\n\nBu talep statik siteden oluşturulmuştur.`;if(navigator.clipboard?.writeText){navigator.clipboard.writeText(message).then(()=>alert("sipariş özeti kopyalandı. ödeme ve sipariş onayı için Hera Software ile iletişime geçebilirsin."));}else{alert(message);}});
+  renderCart();
+  const menu=document.querySelector(".mobile-menu");menu?.addEventListener("click",()=>{const header=document.querySelector(".topbar");const opened=header?.classList.toggle("nav-open")||false;menu.setAttribute("aria-expanded",String(opened));});
+  document.querySelectorAll(".top-nav .page-link").forEach(link=>link.addEventListener("click",()=>document.querySelector(".topbar")?.classList.remove("nav-open")));
+});
